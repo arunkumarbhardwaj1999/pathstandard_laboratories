@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+:root {
+  --ps-white: #ffffff;
+  --ps-slate-50: #f8fafc;
+  --ps-slate-100: #f1f5f9;
+  --ps-slate-200: #e2e8f0;
+  --ps-slate-300: #cbd5e1;
+  --ps-slate-400: #94a3b8;
+  --ps-slate-500: #64748b;
+  --ps-slate-600: #475569;
+  --ps-slate-700: #334155;
+  --ps-slate-800: #1e293b;
+  --ps-slate-900: #0f172a;
+  --ps-navy: #0b1929;
+  --ps-navy-light: #122240;
+  --ps-navy-deep: #060d16;
+  --ps-teal: #0d9488;
+  --ps-teal-light: #14b8a6;
+  --ps-teal-dark: #0f766e;
+  --ps-blue: #1e3a5f;
+  --ps-blue-light: #2563eb;
+  --ps-blue-muted: #e8eef6;
+  --ps-gold: #c8a96e;
+  --ps-gold-light: #e2c994;
+  --ps-film-gold: #e8a820;
+  --ps-accent-bar: #e85d04;
+  --ps-success: #16a34a;
+  --ps-success-bg: #f0fdf4;
+  --ps-error: #dc2626;
+  --ps-error-bg: #fef2f2;
+  --background: var(--ps-white);
+  --foreground: var(--ps-slate-900);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ps-white: var(--ps-white);
+  --color-ps-slate-50: var(--ps-slate-50);
+  --color-ps-slate-100: var(--ps-slate-100);
+  --color-ps-slate-200: var(--ps-slate-200);
+  --color-ps-slate-300: var(--ps-slate-300);
+  --color-ps-slate-400: var(--ps-slate-400);
+  --color-ps-slate-500: var(--ps-slate-500);
+  --color-ps-slate-600: var(--ps-slate-600);
+  --color-ps-slate-700: var(--ps-slate-700);
+  --color-ps-slate-800: var(--ps-slate-800);
+  --color-ps-slate-900: var(--ps-slate-900);
+  --color-ps-navy: var(--ps-navy);
+  --color-ps-navy-light: var(--ps-navy-light);
+  --color-ps-navy-deep: var(--ps-navy-deep);
+  --color-ps-teal: var(--ps-teal);
+  --color-ps-teal-light: var(--ps-teal-light);
+  --color-ps-teal-dark: var(--ps-teal-dark);
+  --color-ps-blue: var(--ps-blue);
+  --color-ps-blue-light: var(--ps-blue-light);
+  --color-ps-blue-muted: var(--ps-blue-muted);
+  --color-ps-gold: var(--ps-gold);
+  --color-ps-gold-light: var(--ps-gold-light);
+  --color-ps-film-gold: var(--ps-film-gold);
+  --color-ps-accent-bar: var(--ps-accent-bar);
+  --color-ps-success: var(--ps-success);
+  --color-ps-success-bg: var(--ps-success-bg);
+  --color-ps-error: var(--ps-error);
+  --color-ps-error-bg: var(--ps-error-bg);
+  --font-sans: var(--font-plus-jakarta);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-hero {
+  @apply text-[2.5rem] font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-[3.5rem] lg:leading-[1.08];
+}
+
+.text-section-title {
+  @apply text-[1.75rem] font-bold leading-[1.15] tracking-tight md:text-4xl lg:text-[2.625rem];
+}
+
+.text-eyebrow {
+  @apply text-[11px] font-bold uppercase tracking-[0.22em] text-ps-slate-500;
+}
+
+.text-lead {
+  @apply text-lg font-normal leading-relaxed text-ps-slate-600 md:text-xl md:leading-relaxed;
+}
+
+.text-highlight {
+  @apply inline box-decoration-clone px-2 py-0.5;
+  background: var(--ps-navy);
+  color: white;
+  line-height: 1.5;
+}
+
+.text-quote {
+  font-family: Georgia, "Times New Roman", serif;
+  @apply italic font-normal;
+}
+
+.section-padding {
+  @apply py-20 md:py-28 lg:py-32;
+}
+
+.section-padding-sm {
+  @apply py-14 md:py-20;
+}
+
+.accent-bar {
+  @apply w-1 shrink-0 self-stretch rounded-full;
+  background: var(--ps-accent-bar);
+  min-height: 3rem;
+}
+
+.feature-card {
+  @apply rounded-lg border border-ps-slate-200 bg-white p-8 transition-all duration-500 ease-out;
+}
+.feature-card:hover {
+  @apply border-ps-slate-300 shadow-[0_8px_30px_rgba(15,23,42,0.08)] -translate-y-0.5;
+}
+
+.product-card {
+  @apply flex flex-col rounded-lg border border-ps-slate-200 bg-white overflow-hidden transition-all duration-500;
+}
+.product-card:hover {
+  @apply shadow-[0_12px_40px_rgba(15,23,42,0.1)] -translate-y-1;
+}
+
+.data-card {
+  @apply rounded-lg border border-ps-slate-200 bg-ps-slate-50 p-6 md:p-8;
+}
+
+.clinical-card {
+  @apply rounded-lg border border-ps-slate-200 bg-white p-8 md:p-10;
+}
+
+.stat-value {
+  @apply text-3xl font-bold tracking-tight text-ps-slate-900 md:text-[2.5rem];
+}
+
+.stat-label {
+  @apply mt-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-ps-slate-500;
+}
+
+.pattern-dashed {
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.step-pill {
+  @apply rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300;
+}
+.step-pill-active {
+  @apply bg-ps-navy text-white shadow-lg;
+}
+.step-pill-inactive {
+  @apply bg-white text-ps-slate-600 border border-ps-slate-200 hover:border-ps-slate-400;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes hero-zoom {
+  from { transform: scale(1.06); }
+  to { transform: scale(1); }
+}
+.animate-hero-zoom {
+  animation: hero-zoom 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.film-scene-enter {
+  animation: film-dissolve-in 0.5s ease-out both;
+}
+@keyframes film-dissolve-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes film-gold-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+.film-gold-pulse {
+  animation: film-gold-pulse 2s ease-in-out infinite;
+}
+@keyframes film-timeline-fill {
+  from { height: 0%; }
+  to { height: 100%; }
+}
+@keyframes film-scan-frame {
+  0% { inset: 20%; opacity: 0.4; }
+  100% { inset: 8%; opacity: 1; }
+}
+.film-scan-frame {
+  animation: film-scan-frame 1.5s ease-out forwards;
+}
+
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-ps-teal;
+}
