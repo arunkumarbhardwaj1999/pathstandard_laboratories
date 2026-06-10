@@ -4,12 +4,12 @@ import { problemPoints, solutionPoints } from "@/lib/content";
 
 export default function ProblemSolution() {
   return (
-    <section className="section-padding bg-white">
+    <section id="problem" className="section-padding bg-white">
       <Container>
         <SectionHeading
           label="The Challenge"
-          title="The slide is still the weakest link in many laboratory workflows."
-          description="Even as pathology becomes more digital, most labs still have no manufacturer-issued documentation for their microscope slides. Slides arrive without lot-level certificates, quality data is not linked to individual units, and audit preparation means hours of manual record-hunting."
+          title="Slides are still the weakest link in many lab workflows."
+          description="Even as labs go digital, most still have no quality paperwork from the slide maker. Slides arrive without lot certificates, quality data isn't tied to each slide, and audit prep means hours of searching for records."
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -32,9 +32,8 @@ export default function ProblemSolution() {
               The Solution
             </h3>
             <p className="mb-4 text-sm text-ps-slate-600">
-              A slide platform designed for traceability, quality, and confidence. PathStandard
-              gives each slide a permanent identity and connects it to the associated manufacturing
-              and quality record.
+              PathStandard gives every slide a permanent ID and links it to its factory quality
+              record — built for tracking, quality, and confidence.
             </p>
             <ul className="space-y-3">
               {solutionPoints.map((point) => (

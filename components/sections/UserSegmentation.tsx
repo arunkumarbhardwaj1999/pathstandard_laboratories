@@ -1,33 +1,46 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { userSegments } from "@/lib/content";
 
 export default function UserSegmentation() {
   return (
-    <section className="section-padding-sm bg-white border-b border-ps-slate-200">
+    <section id="segments" className="section-padding-sm bg-ps-slate-50 border-b border-ps-slate-200">
       <Container wide>
         <ScrollReveal>
-          <p className="text-eyebrow mb-10 text-center">Choose your path</p>
+          <p className="text-center text-sm font-medium text-ps-slate-600">
+            For your assessment. For your diagnosis. For clinicians. For hospitals.
+          </p>
+          <h2 className="mt-4 text-center text-section-title text-ps-navy">For better healthcare.</h2>
         </ScrollReveal>
-        <div className="grid gap-6 md:grid-cols-2">
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {userSegments.map((segment, i) => (
             <ScrollReveal key={segment.title} delay={i * 100}>
-              <a
-                href={segment.href}
-                className="group feature-card flex flex-col min-h-[220px]"
-              >
-                <p className="text-eyebrow mb-3">{segment.subtitle}</p>
-                <h2 className="text-2xl font-bold text-ps-slate-900 group-hover:text-ps-navy transition-colors">
-                  {segment.title}
-                </h2>
-                <p className="mt-4 flex-1 text-base leading-relaxed text-ps-slate-600">
-                  {segment.description}
-                </p>
-                <span className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-ps-blue group-hover:gap-3 transition-all">
-                  {segment.cta}
-                  <span aria-hidden>→</span>
-                </span>
-              </a>
+              <article className="butterfly-segment-card flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-[0_8px_30px_rgba(15,23,42,0.06)]">
+                <div className="relative h-48 overflow-hidden md:h-52">
+                  <Image
+                    src={segment.image}
+                    alt={segment.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6 md:p-8">
+                  <p className="text-eyebrow mb-2">{segment.subtitle}</p>
+                  <h3 className="text-xl font-bold text-ps-navy">{segment.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-ps-slate-600">
+                    {segment.description}
+                  </p>
+                  <div className="mt-6">
+                    <Button href={segment.href} variant="primary" className="w-full sm:w-auto">
+                      {segment.cta}
+                    </Button>
+                  </div>
+                </div>
+              </article>
             </ScrollReveal>
           ))}
         </div>

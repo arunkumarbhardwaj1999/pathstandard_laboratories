@@ -32,10 +32,17 @@ const icons: Record<string, React.ReactNode> = {
   ),
 };
 
-export default function FeatureIcon({ name }: { name: string }) {
-  return (
-    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ps-blue-muted text-ps-blue">
-      {icons[name] ?? icons.shield}
-    </div>
-  );
+export default function FeatureIcon({
+  name,
+  variant = "light",
+}: {
+  name: string;
+  variant?: "light" | "dark";
+}) {
+  const wrapperClass =
+    variant === "dark"
+      ? "flex h-full w-full items-center justify-center text-white"
+      : "flex h-12 w-12 items-center justify-center rounded-xl bg-ps-slate-100 text-ps-navy";
+
+  return <div className={wrapperClass}>{icons[name] ?? icons.shield}</div>;
 }

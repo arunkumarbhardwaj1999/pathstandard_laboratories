@@ -8,8 +8,8 @@ export default function ROI() {
       <Container>
         <SectionHeading
           label="ROI & Value Proof"
-          title="Traceability should reduce cost, not add complexity."
-          description="Laboratories don't buy compliance tools only for documentation — they buy them to reduce rework, save time, and lower operational risk. PathStandard's traceability system directly reduces three measurable cost drivers."
+          title="Tracking should save money, not add work."
+          description="Labs don't buy compliance tools just for paperwork — they buy them to cut rework, save time, and lower risk. PathStandard directly reduces three measurable costs."
         />
 
         <p className="mt-6 text-sm font-semibold tracking-wide text-ps-navy uppercase">

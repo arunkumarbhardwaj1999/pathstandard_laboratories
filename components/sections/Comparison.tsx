@@ -26,7 +26,7 @@ export default function Comparison() {
         <SectionHeading
           label="Competitive Landscape"
           title="Why PathStandard is different."
-          description="Established manufacturers offer specimen labeling and barcode printing. But no competitor currently offers a unified system that combines permanent slide-level serialization, cloud-based quality documentation, and a digital chain of custody in a single platform."
+          description="Other makers offer labeling and barcodes. No one else combines a permanent slide ID, cloud quality records, and full digital tracking in one system."
         />
 
         <div className="mt-12 overflow-x-auto rounded-xl border border-ps-slate-200">
@@ -34,7 +34,7 @@ export default function Comparison() {
             <thead>
               <tr className="border-b border-ps-slate-200 bg-ps-slate-50">
                 <th className="px-4 py-4 font-semibold text-ps-slate-700">Feature</th>
-                <th className="px-4 py-4 font-semibold text-ps-teal">PathStandard</th>
+                <th className="px-4 py-4 font-semibold text-ps-navy">PathStandard</th>
                 <th className="px-4 py-4 font-semibold text-ps-slate-600">Leica</th>
                 <th className="px-4 py-4 font-semibold text-ps-slate-600">Epredia</th>
                 <th className="px-4 py-4 font-semibold text-ps-slate-600">Traditional</th>

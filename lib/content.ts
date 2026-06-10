@@ -12,17 +12,66 @@ export const userSegments = [
     title: "For Healthcare Providers",
     subtitle: "Labs, Hospitals & Pathologists",
     description:
-      "NABL-ready traceability, instant CoA downloads, and audit-ready documentation for your pathology workflow.",
+      "NABL-ready tracking, instant quality certificates (CoA), and audit-ready records for your lab.",
     href: "#use-cases",
-    cta: "Explore lab solutions",
+    cta: "Learn more",
+    image: "/images/packaging-hero.png",
   },
   {
     title: "For Partners & Enterprise",
     subtitle: "Distributors, Investors & Digital Pathology",
     description:
-      "Platform roadmap, LIMS integration, WSI substrate provenance, and multi-site audit management.",
+      "Platform roadmap, LIMS connections, digital pathology support, and multi-site audit tools.",
     href: "#roadmap",
-    cta: "View platform vision",
+    cta: "Learn more",
+    image: "/images/brand-spec.png",
+  },
+  {
+    title: "For Quality & Compliance",
+    subtitle: "NABL Coordinators & Quality Managers",
+    description:
+      "Audit-ready documentation, ISO 15189 templates, and tamper-proof quality records for every slide.",
+    href: "#trust",
+    cta: "Learn more",
+    image: "/images/packaging-hero.png",
+  },
+];
+
+export const ecosystemNodes = [
+  { id: "serialize", label: "Laser Serialization", icon: "barcode" },
+  { id: "qc", label: "QC Records", icon: "document" },
+  { id: "coa", label: "CoA Portal", icon: "scan" },
+  { id: "audit", label: "Audit Docs", icon: "shield" },
+  { id: "lims", label: "LIMS Ready", icon: "chain" },
+  { id: "digital", label: "Digital Pathology", icon: "scan" },
+  { id: "tracking", label: "Chain of Custody", icon: "chain" },
+  { id: "nabl", label: "NABL Aligned", icon: "shield" },
+];
+
+export const realResults = [
+  {
+    badge: "Case Study",
+    title: "NABL audit prep cut from 2 hours to 10 seconds per slide",
+    description:
+      "A quality team replaced manual lot searches with instant CoA downloads during their ISO 15189 re-assessment.",
+    href: "#use-cases",
+    image: "/images/packaging-hero.png",
+  },
+  {
+    badge: "Research",
+    title: "Whole slide images now linked to substrate quality data",
+    description:
+      "Digital pathology centres attach manufacturer QC records to every scan for AI-ready archives.",
+    href: "#features",
+    image: "/images/brand-spec.png",
+  },
+  {
+    badge: "Whitepaper",
+    title: "ISO 15189:2022 consumable traceability requirements explained",
+    description:
+      "How serialized slides help NABL-accredited labs meet Clause 6.6 documentation needs.",
+    href: "#trust",
+    image: "/images/packaging-hero.png",
   },
 ];
 
@@ -30,22 +79,22 @@ export const trustPillars = [
   {
     title: "Serialized",
     subtitle: "Unique Slide Identity",
-    description: "Permanent laser-etched DataMatrix on every slide.",
+    description: "A permanent laser-etched barcode on every slide.",
   },
   {
     title: "Traceable",
-    subtitle: "Full Chain of Custody",
-    description: "Digital records from manufacture to archive.",
+    subtitle: "Full Tracking History",
+    description: "Digital records from factory to archive.",
   },
   {
     title: "CoA Verified",
     subtitle: "Certificate of Analysis",
-    description: "PDF CoA in under 10 seconds via phone scan.",
+    description: "Download a PDF quality certificate in under 10 seconds with a phone scan.",
   },
   {
     title: "NABL Ready",
     subtitle: "Supports Accreditation",
-    description: "ISO 15189:2022 Cl.6.6 aligned documentation.",
+    description: "Documentation aligned with ISO 15189:2022 audit needs.",
   },
 ];
 
@@ -53,7 +102,7 @@ export const heroStats = [
   { value: "6", label: "Slide SKUs" },
   { value: "10 sec", label: "CoA Download" },
   { value: "ISO 15189", label: "2022 Aligned" },
-  { value: "∞", label: "Identity Permanence" },
+  { value: "∞", label: "Permanent ID" },
 ];
 
 export const trustBadges = [
@@ -65,19 +114,19 @@ export const trustBadges = [
 ];
 
 export const problemPoints = [
-  "Slide identity can be lost during handling, staining, or storage.",
-  "Batch and lot data is nearly impossible to retrieve after the fact.",
-  "Manual records slow down audits and create non-conformance risk.",
-  "Handoffs between accessioning, staining, and scanning create traceability gaps.",
-  "Tissue detachment from unverified slide coatings causes rescans and diagnostic delays.",
+  "Slide IDs can be lost during handling, staining, or storage.",
+  "Batch and lot details are hard to find later.",
+  "Paper records slow audits and increase compliance risk.",
+  "Gaps appear when slides move between sample prep, staining, and scanning.",
+  "Poor slide coating can cause tissue to fall off, leading to rescans and delays.",
 ];
 
 export const solutionPoints = [
-  "Permanent laser-etched DataMatrix identity on every slide — survives all staining protocols.",
-  "Lot-level quality data (contact angle, surface energy, coating batch) recorded at manufacture.",
-  "Scan any slide with a phone camera → PDF Certificate of Analysis in under 10 seconds.",
-  "Complete digital chain of custody from manufacture to lab archive.",
-  "DataMatrix readable from Whole Slide Images — substrate provenance for digital pathology.",
+  "A permanent laser-etched barcode on every slide — survives all staining steps.",
+  "Lot-level quality data recorded at manufacture (surface quality, coating batch, and more).",
+  "Scan any slide with your phone → PDF quality certificate (CoA) in under 10 seconds.",
+  "Full digital tracking from manufacture to archive.",
+  "Barcode readable from whole slide images — slide origin data for digital pathology.",
 ];
 
 export const howItWorksSteps = [
@@ -85,214 +134,134 @@ export const howItWorksSteps = [
     step: 1,
     title: "Manufacture & Serialize",
     description:
-      "Each slide is laser-etched with a permanent DataMatrix (ISO/IEC 16022 ECC200) and human-readable serial ID at production in Hyderabad. Quality parameters — contact angle, surface energy, coating lot — are measured and written to the cloud database simultaneously.",
+      "Each slide gets a permanent laser-etched barcode and serial number at our Hyderabad factory. Surface quality and coating details are saved to the cloud at the same time.",
   },
   {
     step: 2,
     title: "QC Record Written",
     description:
-      "Production lot data is written to the PathStandard cloud database: glass batch reference, coating reagent lot, contact angle measurement, surface energy value, QC pass/fail, production date, QA officer name. The record is immutable after creation.",
+      "Lot data goes into the PathStandard cloud: glass batch, coating lot, surface measurements, pass/fail result, production date, and QA officer. Once saved, the record cannot be changed.",
   },
   {
     step: 3,
     title: "Shipment with Batch CoA",
     description:
-      "Slides are packed in boxes of 72. The box label carries a QR code linking to the batch Certificate of Analysis. Every slide inherits the same lot-level quality record.",
+      "Slides ship in boxes of 72. Each box has a QR code linking to the batch quality certificate. Every slide in the box shares the same lot record.",
   },
   {
     step: 4,
     title: "Lab Receipt & Use",
     description:
-      "Any lab technician scans any individual slide with a standard phone camera — no app required. The phone opens cert.pathstandard.com/s/{serial_id} and displays the full quality record. One tap downloads the PDF Certificate of Analysis.",
+      "Any lab staff member scans a slide with a phone camera — no app needed. The browser opens cert.pathstandard.com/s/{serial_id} with the full quality record. One tap downloads the PDF certificate.",
   },
   {
     step: 5,
     title: "Permanent Archive",
     description:
-      "Every scan, every CoA access, every download is logged with a timestamp. Chain of custody from manufacture to archive is complete and retrievable indefinitely. For digital pathology, the DataMatrix is readable from WSI files.",
+      "Every scan, view, and download is logged with a timestamp. The full chain from manufacture to archive stays complete. For digital pathology, the barcode can also be read from whole slide image files.",
   },
 ];
 
 export const comparisonFeatures = [
-  { feature: "Permanent serialized slide identity", pathstandard: true, leica: "limited", epredia: "limited", traditional: false },
-  { feature: "DataMatrix / barcode traceability", pathstandard: true, leica: true, epredia: true, traditional: "limited" },
-  { feature: "Per-slide Certificate of Analysis", pathstandard: true, leica: false, epredia: false, traditional: false },
-  { feature: "Digital chain of custody records", pathstandard: true, leica: "limited", epredia: "limited", traditional: false },
-  { feature: "Phone scan — no equipment needed", pathstandard: true, leica: false, epredia: false, traditional: false },
-  { feature: "ISO 15189:2022 Cl.6.6 documentation", pathstandard: true, leica: "limited", epredia: "limited", traditional: false },
-  { feature: "WSI-readable DataMatrix for AI datasets", pathstandard: true, leica: false, epredia: false, traditional: false },
-  { feature: "No lab-side equipment investment", pathstandard: true, leica: false, epredia: false, traditional: false },
+  { feature: "Permanent slide ID on every slide", pathstandard: true, leica: "limited", epredia: "limited", traditional: false },
+  { feature: "Barcode tracking", pathstandard: true, leica: true, epredia: true, traditional: "limited" },
+  { feature: "Per-slide quality certificate (CoA)", pathstandard: true, leica: false, epredia: false, traditional: false },
+  { feature: "Digital tracking records", pathstandard: true, leica: "limited", epredia: "limited", traditional: false },
+  { feature: "Phone scan — no extra equipment", pathstandard: true, leica: false, epredia: false, traditional: false },
+  { feature: "ISO 15189:2022 audit documents", pathstandard: true, leica: "limited", epredia: "limited", traditional: false },
+  { feature: "Barcode readable from whole slide images", pathstandard: true, leica: false, epredia: false, traditional: false },
+  { feature: "No new equipment needed in the lab", pathstandard: true, leica: false, epredia: false, traditional: false },
 ];
 
 export const roiRows = [
   {
     driver: "Tissue detachment rescan cost",
     without: "₹12,500/day at 5–7% failure rate",
-    with: "Lot traceability pinpoints batch — issue resolved in one scan",
+    with: "Lot tracking finds the batch — fixed in one scan",
   },
   {
     driver: "NABL audit documentation prep",
     without: "2+ hours per consumable category",
-    with: "10-second CoA download — zero manual prep",
+    with: "10-second CoA download — no manual prep",
   },
   {
     driver: "Root-cause investigation time",
     without: "Days of searching with no lot data",
-    with: "Scan any slide → full manufacture record instantly",
+    with: "Scan any slide → full factory record instantly",
   },
   {
-    driver: "WSI substrate metadata (digital labs)",
-    without: "Anonymous glass — no provenance",
-    with: "DataMatrix → auto-linked QC record per scan",
+    driver: "Whole slide image metadata (digital labs)",
+    without: "Unknown glass — no origin data",
+    with: "Barcode links to quality record on every scan",
   },
-];
-
-export const marketDrivers = [
-  {
-    title: "ISO 15189:2022 Mandate",
-    description:
-      "All NABL-accredited labs in India now required to document traceability for every consumable including slides. Compliance is not optional.",
-  },
-  {
-    title: "Digital Pathology Growth",
-    description:
-      "India's digital pathology market at USD 48.5M (2025), growing at 10.45% CAGR to USD 124.1M by 2034. Every WSI file needs linked substrate metadata.",
-  },
-  {
-    title: "Quality as Competitive Advantage",
-    description:
-      "Lupin Diagnostics: all 27 greenfield labs NABL-accredited (April 2025). Quality credentials are now a commercial differentiator in the India diagnostics market.",
-  },
-];
-
-export const features = [
-  {
-    title: "Permanent Laser Serialization",
-    description:
-      "ISO/IEC 16022 ECC200 DataMatrix laser-etched directly into the glass surface — not a label, not an ink print. Survives all staining protocols (H&E, IHC, FISH), xylene clearing, and archival storage for decades.",
-    tag: "ISO/IEC 16022 · ISO/IEC 15415",
-    icon: "barcode",
-  },
-  {
-    title: "Instant Certificate of Analysis",
-    description:
-      "Scan any slide with any phone camera. No app required. Opens cert.pathstandard.com/s/{serial_id} and displays the full manufacturer QC record. One tap downloads a PDF Certificate of Analysis.",
-    tag: "ISO 15189:2022 Cl.6.6",
-    icon: "document",
-  },
-  {
-    title: "Digital Chain of Custody",
-    description:
-      "Every scan, every CoA access, every download is logged with a timestamp and user record. Complete chain from manufacture to archive. Assessors get a tamper-evident audit trail with zero manual preparation.",
-    tag: "Audit Ready · NABL 112A",
-    icon: "chain",
-  },
-  {
-    title: "APTES-Certified Surface Coating",
-    description:
-      "Contact angle and surface energy measured and documented per lot. APTES-charged slides have contact angle <10° (specification). Lot-level coating records eliminate root-cause ambiguity when tissue detachment occurs.",
-    tag: "Documented Per Lot",
-    icon: "coating",
-  },
-  {
-    title: "WSI Integration for Digital Pathology",
-    description:
-      "DataMatrix and fiducial array are sized and positioned for reliable readability from Whole Slide Image scans at standard magnifications. Software can auto-extract serial ID from WSI and query PathStandard database.",
-    tag: "Digital Pathology Ready",
-    icon: "scan",
-  },
-  {
-    title: "NABL Audit Documentation Package",
-    description:
-      "Pre-formatted ISO 15189:2022 Clause 6.6 documentation template referencing PathStandard lot records. Assessor-facing CoA PDFs include all required fields: manufacturer name, lot number, expiry, specification values.",
-    tag: "NABL 112A Compliant",
-    icon: "shield",
-  },
-];
-
-export const integrations = [
-  "LIMS platforms (via QR/DataMatrix scan or API — roadmap)",
-  "Whole Slide Imaging systems (DataMatrix readable from WSI files)",
-  "Standard phone cameras — iOS and Android, no app required",
-  "Desktop and mobile browsers for CoA portal access",
-  "Hospital and lab IT environments (web-based, no local installation)",
-  "Barcode scanners — compatible with ISO/IEC 16022 ECC200 DataMatrix readers",
-];
-
-export const securityFeatures = [
-  { feature: "Encrypted Records", description: "All slide quality records stored with encryption at rest and in transit." },
-  { feature: "Immutable QC Records", description: "QC data written at manufacture cannot be edited or deleted. Tamper-evident audit trail." },
-  { feature: "Role-Based Access", description: "Labs can control who in their team can access which records." },
-  { feature: "Audit Logging", description: "Every access event (scan, view, download) is logged with timestamp, user, and IP." },
-  { feature: "Controlled Data Retention", description: "Records retained per lab policy. Indefinite retention available for archival labs." },
 ];
 
 export const roadmapPhases = [
-  { phase: "Phase 1", name: "Serialized Slides", description: "Permanently serialized APTES, plain, frosted, PLL, cytology, and FISH slides with cloud QC records." },
-  { phase: "Phase 2", name: "CoA Portal", description: "Web portal for labs to scan any slide and retrieve PDF Certificate of Analysis in under 10 seconds." },
-  { phase: "Phase 3", name: "Lab Dashboard", description: "Lab-side portal showing all slides scanned, CoA access history, lot records, and audit summary reports." },
-  { phase: "Phase 4", name: "LIMS Integration", description: "API connectivity for direct integration with major LIMS platforms." },
-  { phase: "Phase 5", name: "AI Dataset Traceability", description: "Structured substrate metadata export for AI/ML training datasets with WSI auto-linking." },
-  { phase: "Phase 6", name: "Enterprise Audit Platform", description: "Multi-site audit management, automated non-conformance alerts, and regulatory reporting dashboard." },
+  { phase: "Phase 1", name: "Serialized Slides", description: "Slides with permanent IDs and cloud quality records — APTES, plain, frosted, PLL, cytology, and FISH types." },
+  { phase: "Phase 2", name: "CoA Portal", description: "Web portal to scan any slide and download a PDF quality certificate in under 10 seconds." },
+  { phase: "Phase 3", name: "Lab Dashboard", description: "Lab portal showing scanned slides, certificate history, lot records, and audit summary reports." },
+  { phase: "Phase 4", name: "LIMS Integration", description: "Direct API connections to major LIMS platforms." },
+  { phase: "Phase 5", name: "AI Dataset Traceability", description: "Export slide quality data for AI training datasets, auto-linked to whole slide images." },
+  { phase: "Phase 6", name: "Enterprise Audit Platform", description: "Multi-site audit management, compliance alerts, and regulatory reporting dashboard." },
 ];
 
 export const personas = [
-  { title: "Lab Owner / Director", need: "Wants ROI, fewer audit failures, competitive differentiation." },
-  { title: "Quality Manager", need: "Needs ISO 15189 Cl.6.6 documentation to satisfy NABL assessors." },
-  { title: "NABL Coordinator", need: "Responsible for keeping audit records complete. Wants zero gaps." },
-  { title: "Pathologist", need: "Wants substrate confidence — knows tissue detachment costs diagnostic time." },
-  { title: "Hospital Procurement", need: "Evaluating total cost of ownership and regulatory risk." },
-  { title: "Digital Pathology Director", need: "Building AI-ready WSI archives — needs substrate provenance data." },
+  { title: "Lab Owner / Director", need: "Wants better returns, fewer audit failures, and a quality edge over competitors." },
+  { title: "Quality Manager", need: "Needs ISO 15189 documentation ready for NABL assessors." },
+  { title: "NABL Coordinator", need: "Keeps audit records complete and wants zero gaps." },
+  { title: "Pathologist", need: "Wants confidence in slide quality — tissue falling off wastes diagnostic time." },
+  { title: "Hospital Procurement", need: "Weighing total cost and regulatory risk before buying." },
+  { title: "Digital Pathology Director", need: "Building AI-ready image archives and needs slide origin data." },
 ];
 
 export const useCases = [
   {
-    title: "NABL-Accredited Lab: Annual ISO 15189 Re-Assessment Audit",
+    title: "NABL Lab: Annual ISO 15189 Audit",
     audience: "Quality Manager / NABL Coordinator",
-    before: "2+ hours searching paper delivery notes, calling distributors, manually compiling lot records. Records often missing. Non-conformance raised.",
-    after: "10-second scan of any slide → PDF CoA with complete lot history. Assessor satisfied. Zero non-conformances on consumable traceability.",
+    before: "2+ hours digging through paper delivery notes, calling suppliers, and compiling lot records. Records often missing. Audit issues raised.",
+    after: "10-second slide scan → PDF certificate with full lot history. Assessor satisfied. Zero issues on consumable tracking.",
     quote: "From 2-hour search to 10-second download.",
   },
   {
-    title: "High-Volume Hospital Lab: Recurring Tissue Detachment",
+    title: "Busy Hospital Lab: Recurring Tissue Detachment",
     audience: "Lab Director / Pathologist",
-    before: "₹12,500/day in rescan costs. Supplier switch doesn't resolve it. Root cause unknown — no lot documentation.",
-    after: "APTES-certified coating with documented surface energy per lot. Detachment occurs → batch record scanned immediately → lot QC data pinpoints the coating issue.",
+    before: "₹12,500/day in rescan costs. Changing suppliers didn't help. No lot records — root cause unknown.",
+    after: "Coating quality documented per lot. When tissue falls off, scan the batch record → lot data shows the coating issue right away.",
     quote: "Stop guessing. Start tracing.",
   },
   {
-    title: "Digital Pathology Centre: Building an AI-Ready WSI Archive",
+    title: "Digital Pathology Centre: Building an AI-Ready Image Archive",
     audience: "Digital Pathology Director",
-    before: "WSI files have no linked substrate quality data. Anonymous glass — no provenance for AI training datasets.",
-    after: "DataMatrix readable from WSI → software auto-queries PathStandard database → manufacturer QC record attached to WSI metadata automatically.",
-    quote: "Every WSI now has a verified substrate identity.",
+    before: "Whole slide image files have no linked slide quality data. Unknown glass — no origin info for AI training.",
+    after: "Barcode readable from images → software looks up PathStandard → quality record attached to image metadata automatically.",
+    quote: "Every image now has a verified slide identity.",
   },
 ];
 
 export const faqs = [
   {
-    q: "How is the DataMatrix applied to the slide?",
-    a: "It is laser-etched permanently into the glass surface — not a label, sticker, or ink print. The etching depth and contrast are optimized to ISO/IEC 16022 ECC200 and ISO/IEC 15415 Grade A specifications, ensuring reliable scan readability after all standard staining and clearing protocols.",
+    q: "How is the barcode applied to the slide?",
+    a: "It is laser-etched permanently into the glass — not a label, sticker, or ink print. It stays readable after all standard staining and clearing steps.",
   },
   {
     q: "Does scanning require a special app?",
-    a: "No. Any standard phone camera (iOS or Android) can scan the DataMatrix. The camera opens cert.pathstandard.com/s/{serial_id} directly in the phone's browser. No app download, no account creation required for CoA access.",
+    a: "No. Any phone camera (iOS or Android) can scan the barcode. It opens cert.pathstandard.com/s/{serial_id} in your browser. No app download or account needed.",
   },
   {
     q: "Can existing slides already in use be serialized?",
-    a: "No. Serialization is applied permanently at manufacture during the laser-etching process. It cannot be added to slides after production. Labs transitioning to PathStandard start with new orders; existing stock continues to be used normally.",
+    a: "No. The barcode is added at manufacture during laser etching. It cannot be added later. Labs start with new PathStandard orders; existing stock is used as normal.",
   },
   {
     q: "Does it work with our existing barcode scanners?",
-    a: "Yes. PathStandard DataMatrix barcodes are ISO/IEC 16022 ECC200 compliant and are readable by any standard 2D barcode scanner. The CoA portal is web-based and accessible from any scanner-connected workstation or mobile device.",
+    a: "Yes. PathStandard barcodes work with any standard 2D barcode scanner. The CoA portal is web-based and works from scanners, desktops, or phones.",
   },
   {
     q: "How long is quality data retained?",
-    a: "All quality records are retained indefinitely by default. The cloud database is designed for long-term archival — a pathologist can scan a slide retrieved from a 10-year archive and retrieve the original manufacture QC record.",
+    a: "All quality records are kept indefinitely by default. You can scan a slide from a 10-year archive and still get the original factory quality record.",
   },
   {
     q: "Is PathStandard a Class A or Class B medical device?",
-    a: "PathStandard slides are classified as Class A In Vitro Diagnostic medical devices under India's Medical Devices Rules (MDR) 2017 and CDSCO classification framework.",
+    a: "PathStandard slides are Class A In Vitro Diagnostic devices under India's Medical Devices Rules (MDR) 2017 and the CDSCO framework.",
   },
 ];
 
@@ -327,13 +296,13 @@ export const workflowFilmScenes = [
   {
     id: 1,
     title: "The Problem",
-    caption: "Today — 200 anonymous slides. No documentation.",
+    caption: "Today — 200 slides with no ID and no paperwork.",
     duration: 8,
   },
   {
     id: 2,
     title: "The Slide Arrives",
-    caption: "PathStandard™ — identity etched permanently in glass.",
+    caption: "PathStandard™ — a permanent ID etched into the glass.",
     duration: 9,
   },
   {
@@ -351,19 +320,19 @@ export const workflowFilmScenes = [
   {
     id: 5,
     title: "The Certificate",
-    caption: "NABL-ready Certificate of Analysis — in 8 seconds.",
+    caption: "NABL-ready quality certificate — in 8 seconds.",
     duration: 8,
   },
   {
     id: 6,
-    title: "Chain of Custody",
-    caption: "Complete chain of custody. Manufacture to archive.",
+    title: "Full Tracking",
+    caption: "Complete history from factory to archive.",
     duration: 9,
   },
   {
     id: 7,
     title: "The Outcome",
-    caption: "NABL audit documentation. 30 seconds, not 4 hours.",
+    caption: "NABL audit papers ready in 30 seconds, not 4 hours.",
     duration: 10,
   },
 ];
@@ -371,5 +340,249 @@ export const workflowFilmScenes = [
 export const workflowFilmEndCard = {
   brand: "PathStandard Technologies",
   url: "cert.pathstandard.com",
-  tagline: "Serialized pathology slides with NABL-ready traceability documentation.",
+  tagline: "Serialized pathology slides with NABL-ready tracking and documentation.",
 };
+
+export const missionStatement = {
+  label: "Our Mission",
+  headline: "To make every pathology slide traceable, from factory to archive.",
+  body: "PathStandard gives laboratories permanent slide identity, instant quality certificates, and audit-ready records — with no new equipment required.",
+};
+
+export const labStory = {
+  title: "Why PathStandard Exists",
+  category: "Slide Traceability",
+  intro:
+    "We started PathStandard after seeing the same problem in labs across India: quality teams spent hours gathering audit papers for slides that were never built to be tracked.",
+  body: [
+    "Most labs still receive slides with no quality paperwork from the manufacturer. When audit day comes, staff search through delivery notes and call suppliers — often with no result.",
+    "PathStandard changes that. Every slide gets a permanent ID etched into the glass. Scan it with any phone and download a full quality certificate in seconds.",
+  ],
+};
+
+export const regulatoryDisclosures = {
+  productInfo: {
+    title: "Important Product Information",
+    paragraphs: [
+      "PathStandard serialized slides are Class A In Vitro Diagnostic (IVD) medical devices under India's Medical Devices Rules (MDR) 2017 and the CDSCO classification framework.",
+      "Slides are intended for use in clinical and research pathology laboratories. Quality certificates (CoA) provide manufacturer lot data and should be reviewed alongside your lab's standard quality procedures.",
+      "Scan results and CoA downloads are provided for documentation and audit support. They do not replace your lab's internal quality management system or assessor judgment.",
+    ],
+  },
+  labInfo: {
+    title: "Quality & Regulatory Information",
+    paragraphs: [
+      "PathStandard manufacturing is aligned with ISO 13485 Quality Management System requirements. Documentation supports ISO 15189:2022 Clause 6.6 consumable traceability needs for NABL-accredited laboratories.",
+      "Slide barcodes comply with ISO/IEC 16022 DataMatrix standards. Quality records are stored with encryption and maintained as tamper-evident, immutable entries from the point of manufacture.",
+      "For regulatory inquiries, contact hello@pathstandard.com. Product specifications are subject to change. Intended for laboratory and healthcare professional use in India and APAC markets.",
+    ],
+  },
+};
+
+export const partnerLogos = [
+  { name: "NABL Aligned" },
+  { name: "ISO 15189" },
+  { name: "ISO 13485" },
+  { name: "CDSCO Class A" },
+];
+
+export const coreTechnologies = [
+  {
+    title: "Laser Serialization",
+    icon: "barcode",
+    description: "Permanent barcode etched into every slide at manufacture.",
+  },
+  {
+    title: "Quality Documentation",
+    icon: "document",
+    description: "Instant CoA downloads and NABL-ready audit records.",
+  },
+  {
+    title: "Digital Tracking",
+    icon: "chain",
+    description: "Full chain of custody from factory to lab archive.",
+  },
+];
+
+export const productCategories = [
+  {
+    title: "Serialized Slides",
+    description: "Six slide types with permanent IDs, lot-level records, and NABL-ready documentation.",
+    cta: "View all slide types",
+    href: "#slide-portfolio",
+    image: "/images/brand-spec.png",
+    imageAlt: "PathStandard serialized pathology slides",
+  },
+  {
+    title: "CoA & Quality Portal",
+    description: "Scan any slide with a phone and download a PDF quality certificate in under 10 seconds.",
+    cta: "View CoA portal",
+    href: "https://cert.pathstandard.com",
+    image: "/images/packaging-hero.png",
+    imageAlt: "PathStandard quality certificate portal",
+  },
+];
+
+export const platformSpotlight = {
+  label: "Platform spotlight",
+  title: "PathStandard innovation roadmap",
+  description:
+    "From serialized slides to LIMS integration, lab dashboards, and enterprise audit tools — see where the platform is headed.",
+  cta: "View roadmap",
+  href: "#roadmap",
+};
+
+export const productsSectionIntro = {
+  title: "Products and services",
+  description:
+    "The traceability technology your lab needs. The documentation and support your quality team deserves. Designed with your audit results in mind.",
+};
+
+export const customerTrust = {
+  headline: "Trusted by pathology labs across India and APAC",
+  subheadline:
+    "Academic hospitals, NABL-accredited labs, and digital pathology centres rely on PathStandard for slide traceability and audit-ready documentation.",
+  stats: [
+    {
+      stat: "10 sec",
+      label: "reduction in CoA retrieval time vs manual record search",
+      partner: "NABL Labs",
+      href: "#use-cases",
+      image: "/images/packaging-hero.png",
+    },
+    {
+      stat: "6",
+      label: "serialized slide SKUs with permanent ID and lot-level records",
+      partner: "PathStandard",
+      href: "#slide-portfolio",
+      image: "/images/brand-spec.png",
+    },
+    {
+      stat: "100%",
+      label: "of slides ship with manufacturer-issued quality documentation",
+      partner: "ISO 15189",
+      href: "#trust",
+      image: "/images/packaging-hero.png",
+    },
+  ],
+};
+
+export const whyChooseBlocks = [
+  {
+    icon: "barcode",
+    title: "Digitize your lab, automate traceability, and speed up audits.",
+    paragraphs: [
+      "Plan, record, and share slide quality data in a system built for pathology workflows.",
+      "Replace paper lot searches with instant phone scans and PDF quality certificates.",
+      "Give quality teams audit-ready records without hours of manual preparation.",
+    ],
+    href: "#how-it-works",
+    visual: "workflow",
+  },
+  {
+    icon: "document",
+    title: "Build a data foundation that fits your unique lab science.",
+    paragraphs: [
+      "Every slide carries a permanent ID linked to factory QC records in the cloud.",
+      "Lot-level surface quality, coating batch, and production data — recorded at manufacture.",
+      "Works with histology, cytology, IHC, FISH, and digital pathology workflows.",
+    ],
+    href: "#features",
+    visual: "data",
+  },
+  {
+    icon: "chain",
+    title: "Evolve with your lab on an open, flexible traceability platform.",
+    paragraphs: [
+      "Connect to LIMS, whole slide imaging, and hospital IT — no local installation required.",
+      "Scale from a single NABL lab to multi-site hospital networks.",
+      "Roadmap includes lab dashboards, API access, and enterprise audit tools.",
+    ],
+    href: "#roadmap",
+    visual: "platform",
+  },
+];
+
+export const exploreTabs = [
+  {
+    id: "histology",
+    label: "Histology",
+    title: "Perform efficient histology with traceable slides.",
+    description:
+      "Serialized H&E and IHC slides with permanent barcodes that survive all staining and clearing steps.",
+    href: "#slide-portfolio",
+    image: "/images/brand-spec.png",
+  },
+  {
+    id: "cytology",
+    label: "Cytology",
+    title: "Track every cytology slide from factory to report.",
+    description:
+      "PAP and cytology SKUs with lot-level quality records and instant CoA access for audit teams.",
+    href: "#slide-portfolio",
+    image: "/images/packaging-hero.png",
+  },
+  {
+    id: "digital",
+    label: "Digital Pathology",
+    title: "Link whole slide images to substrate quality data.",
+    description:
+      "Barcodes readable from WSI files — attach manufacturer QC records to every digital scan automatically.",
+    href: "#features",
+    image: "/images/brand-spec.png",
+  },
+  {
+    id: "compliance",
+    label: "NABL Compliance",
+    title: "Meet ISO 15189 consumable traceability requirements.",
+    description:
+      "Pre-formatted audit documentation, tamper-proof records, and assessor-ready CoA PDFs in seconds.",
+    href: "#trust",
+    image: "/images/packaging-hero.png",
+  },
+  {
+    id: "quality",
+    label: "Quality Management",
+    title: "Give your quality team the records they need.",
+    description:
+      "Immutable manufacture records, role-based access, and full audit logging for every scan and download.",
+    href: "#trust",
+    image: "/images/brand-spec.png",
+  },
+];
+
+export const solutionModalities = [
+  { title: "Histology & IHC", icon: "coating", href: "#slide-portfolio" },
+  { title: "Cytology & PAP", icon: "scan", href: "#slide-portfolio" },
+  { title: "FISH & Molecular", icon: "barcode", href: "#slide-portfolio" },
+  { title: "Digital Pathology", icon: "scan", href: "#features" },
+  { title: "NABL Audit Prep", icon: "shield", href: "#trust" },
+  { title: "Hospital Procurement", icon: "document", href: "#use-cases" },
+];
+
+export const labServices = [
+  {
+    title: "Implementation & onboarding",
+    description:
+      "Get support transitioning to serialized slides — sample boxes, workflow guides, and quality team training.",
+    icon: "shield",
+  },
+  {
+    title: "CoA portal access",
+    description:
+      "Scan any slide with a phone and download PDF quality certificates in under 10 seconds. No app required.",
+    icon: "document",
+  },
+  {
+    title: "Compliance documentation",
+    description:
+      "ISO 15189:2022 templates, NABL audit packages, and assessor-ready records for every slide lot.",
+    icon: "chain",
+  },
+  {
+    title: "Platform & integrations",
+    description:
+      "LIMS connectivity, WSI metadata linking, and API access on the PathStandard roadmap.",
+    icon: "scan",
+  },
+];

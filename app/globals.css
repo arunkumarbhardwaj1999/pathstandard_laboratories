@@ -19,12 +19,6 @@
   --ps-teal-light: #14b8a6;
   --ps-teal-dark: #0f766e;
   --ps-blue: #1e3a5f;
-  --ps-blue-light: #2563eb;
-  --ps-blue-muted: #e8eef6;
-  --ps-gold: #c8a96e;
-  --ps-gold-light: #e2c994;
-  --ps-film-gold: #e8a820;
-  --ps-accent-bar: #e85d04;
   --ps-success: #16a34a;
   --ps-success-bg: #f0fdf4;
   --ps-error: #dc2626;
@@ -54,12 +48,6 @@
   --color-ps-teal-light: var(--ps-teal-light);
   --color-ps-teal-dark: var(--ps-teal-dark);
   --color-ps-blue: var(--ps-blue);
-  --color-ps-blue-light: var(--ps-blue-light);
-  --color-ps-blue-muted: var(--ps-blue-muted);
-  --color-ps-gold: var(--ps-gold);
-  --color-ps-gold-light: var(--ps-gold-light);
-  --color-ps-film-gold: var(--ps-film-gold);
-  --color-ps-accent-bar: var(--ps-accent-bar);
   --color-ps-success: var(--ps-success);
   --color-ps-success-bg: var(--ps-success-bg);
   --color-ps-error: var(--ps-error);
@@ -118,9 +106,96 @@ body {
 }
 
 .accent-bar {
-  @apply w-1 shrink-0 self-stretch rounded-full;
-  background: var(--ps-accent-bar);
+  @apply w-1 shrink-0 self-stretch rounded-full bg-ps-navy;
   min-height: 3rem;
+}
+
+.text-display {
+  @apply text-[2rem] font-light leading-[1.15] tracking-tight text-ps-navy md:text-[2.75rem] lg:text-[3.25rem];
+}
+
+.pattern-grid-lines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 18px,
+    #e2e8f0 18px,
+    #e2e8f0 19px
+  ),
+  repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 18px,
+    #e2e8f0 18px,
+    #e2e8f0 19px
+  );
+  opacity: 0.6;
+}
+
+.hero-glow-dark {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 65%);
+}
+
+.ecosystem-ring {
+  animation: ecosystem-spin 60s linear infinite;
+}
+
+.ecosystem-ring-glow {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+}
+
+@keyframes ecosystem-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.butterfly-segment-card {
+  @apply transition-transform duration-300;
+}
+.butterfly-segment-card:hover {
+  @apply -translate-y-1;
+}
+
+.scroll-workflow-step {
+  scroll-margin-top: 7rem;
+}
+
+.benchling-stat-card {
+  @apply border border-ps-slate-200 bg-white transition-shadow duration-300;
+}
+.benchling-stat-card:hover {
+  @apply shadow-[0_16px_48px_rgba(15,23,42,0.08)];
+}
+
+.benchling-visual-panel {
+  @apply rounded-3xl bg-ps-slate-100;
+}
+
+.benchling-service-card {
+  @apply border border-ps-slate-200 shadow-[0_4px_24px_rgba(15,23,42,0.04)] transition-shadow duration-300;
+}
+.benchling-service-card:hover {
+  @apply shadow-[0_12px_40px_rgba(15,23,42,0.08)];
+}
+
+.illumina-product-card {
+  @apply border border-ps-slate-200 bg-gradient-to-b from-white to-ps-slate-50 transition-shadow duration-300;
+}
+.illumina-product-card:hover {
+  @apply shadow-[0_16px_48px_rgba(15,23,42,0.08)];
+}
+
+.tech-card-dark {
+  background: linear-gradient(145deg, #122240 0%, #0b1929 50%, #060d16 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.text-link-underline {
+  @apply text-sm font-bold text-ps-navy underline decoration-ps-slate-300 underline-offset-4 transition-colors hover:decoration-ps-navy;
+}
+
+.spotlight-banner {
+  background: linear-gradient(135deg, #0b1929 0%, #122240 50%, #1e293b 100%);
 }
 
 .feature-card {
@@ -202,12 +277,12 @@ body {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-@keyframes film-gold-pulse {
+@keyframes film-accent-pulse {
   0%, 100% { opacity: 0.6; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.15); }
 }
-.film-gold-pulse {
-  animation: film-gold-pulse 2s ease-in-out infinite;
+.film-accent-pulse {
+  animation: film-accent-pulse 2s ease-in-out infinite;
 }
 @keyframes film-timeline-fill {
   from { height: 0%; }
@@ -222,5 +297,9 @@ body {
 }
 
 *:focus-visible {
-  @apply outline-2 outline-offset-2 outline-ps-teal;
+  @apply outline-2 outline-offset-2 outline-ps-navy;
+}
+
+.form-input-dark {
+  @apply w-full rounded-lg border border-ps-slate-600 bg-ps-navy px-3 py-2.5 text-sm text-white placeholder:text-ps-slate-500 focus:border-white/40 focus:outline-none;
 }

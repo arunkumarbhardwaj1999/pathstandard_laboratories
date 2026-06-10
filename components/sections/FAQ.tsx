@@ -28,7 +28,7 @@ export default function FAQ() {
               >
                 <span className="pr-4 font-semibold text-ps-slate-900">{faq.q}</span>
                 <svg
-                  className={`h-5 w-5 shrink-0 text-ps-teal transition-transform ${openIndex === index ? "rotate-180" : ""}`}
+                  className={`h-5 w-5 shrink-0 text-ps-navy transition-transform ${openIndex === index ? "rotate-180" : ""}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

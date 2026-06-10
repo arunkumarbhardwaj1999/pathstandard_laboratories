@@ -7,9 +7,9 @@ interface LogoProps {
 }
 
 const heights = {
-  sm: 40,
-  md: 48,
-  lg: 64,
+  sm: 52,
+  md: 60,
+  lg: 76,
 };
 
 export default function Logo({ variant = "dark", size = "md" }: LogoProps) {

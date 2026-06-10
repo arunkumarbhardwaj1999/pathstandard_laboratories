@@ -1,37 +1,33 @@
 import Container from "@/components/ui/Container";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { missionStatement } from "@/lib/content";
 
 export default function PlatformIntro() {
   return (
-    <section className="section-padding-sm bg-ps-slate-50">
+    <section className="section-padding-sm bg-white border-b border-ps-slate-200">
       <Container wide>
         <ScrollReveal>
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-start">
             <div>
-              <h2 className="text-section-title text-ps-slate-900">
-                Helping laboratories lead the way in traceability.
-              </h2>
-              <p className="text-lead mt-6 max-w-lg">
-                No matter your area of expertise — quality management, digital pathology, or
-                hospital procurement — our serialized slide platform is designed to drive your
-                compliance and diagnostic confidence to the next level.
-              </p>
+              <span className="inline-block rounded-full bg-ps-slate-100 px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-ps-slate-600">
+                {missionStatement.label}
+              </span>
+              <h2 className="mt-6 text-section-title text-ps-navy">{missionStatement.headline}</h2>
+              <p className="text-lead mt-6 max-w-lg">{missionStatement.body}</p>
             </div>
 
-            <div className="relative flex items-center justify-center py-8">
-              <div className="pattern-dashed absolute inset-0 rounded-2xl opacity-40" />
-              <div className="relative grid grid-cols-3 gap-4 p-8">
-                {["Serialize", "Verify", "Archive"].map((label, i) => (
-                  <div
-                    key={label}
-                    className="flex h-24 w-24 items-center justify-center rounded-full border-2 border-ps-slate-200 bg-white text-center shadow-sm md:h-28 md:w-28"
-                    style={{ transform: `translateY(${i % 2 === 0 ? "0" : "12px"})` }}
-                  >
-                    <span className="text-xs font-bold uppercase tracking-wider text-ps-slate-600">
-                      {label}
-                    </span>
+            <div className="bg-ps-slate-50 p-8 md:p-10 lg:p-12">
+              <div className="flex gap-6">
+                <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-sm bg-ps-slate-200">
+                  <div className="flex h-full w-full items-center justify-center text-2xl font-bold text-ps-slate-400">
+                    PS
                   </div>
-                ))}
+                </div>
+                <blockquote className="text-base leading-relaxed text-ps-slate-700 md:text-lg">
+                  &ldquo;We built PathStandard to make slide tracking simple, audit-ready, and easy
+                  for every pathology lab — because quality teams deserve better than hours of
+                  paper-chasing.&rdquo;
+                </blockquote>
               </div>
             </div>
           </div>

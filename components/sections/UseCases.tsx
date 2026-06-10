@@ -35,7 +35,7 @@ export default function UseCases() {
                 </div>
               </div>
 
-              <p className="text-quote mt-4 text-lg text-ps-blue">
+              <p className="text-quote mt-4 text-lg text-ps-navy">
                 &ldquo;{useCase.quote}&rdquo;
               </p>
             </div>

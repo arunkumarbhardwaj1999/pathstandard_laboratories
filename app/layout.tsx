@@ -11,6 +11,9 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://pathstandard.com"
+  ),
   title: "PathStandard Technologies — Serialized Pathology Reference Slides",
   description:
     "PathStandard helps laboratories protect sample identity, improve traceability, and maintain audit-ready documentation across the full slide lifecycle.",

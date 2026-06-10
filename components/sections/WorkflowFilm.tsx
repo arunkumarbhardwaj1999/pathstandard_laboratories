@@ -56,7 +56,7 @@ export default function WorkflowFilm() {
       <Container wide>
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-ps-film-gold">
+            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-white/50">
               Workflow Film
             </p>
             <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">
@@ -66,20 +66,19 @@ export default function WorkflowFilm() {
           <button
             type="button"
             onClick={() => setPlaying((p) => !p)}
-            className="self-start rounded-full border border-white/20 px-5 py-2 text-xs font-semibold text-white/80 hover:border-ps-film-gold/50 hover:text-ps-film-gold transition-colors"
+            className="self-start rounded-full border border-white/20 px-5 py-2 text-xs font-semibold text-white/80 hover:border-white/40 hover:text-white transition-colors"
           >
             {playing ? "Pause" : "Play"}
           </button>
         </div>
 
-        <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-white/10 bg-[#060d16] shadow-2xl">
+        <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-white/10 bg-ps-navy-deep shadow-2xl">
           {!showEndCard ? (
             <div key={fadeKey} className="film-scene-enter absolute inset-0">
               <WorkflowSceneVisual sceneId={scene.id} />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
-              <div className="pointer-events-none absolute inset-0 bg-cyan-950/10" />
               <div className="absolute left-6 top-6 md:left-10 md:top-10">
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ps-film-gold">
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/50">
                   Scene {scene.id}
                 </p>
                 <p className="mt-1 text-sm font-medium text-white/70">{scene.title}</p>
@@ -92,10 +91,10 @@ export default function WorkflowFilm() {
             </div>
           ) : (
             <div key="endcard" className="film-scene-enter absolute inset-0 flex flex-col items-center justify-center bg-black px-8 text-center">
-              <p className="text-xl font-bold text-ps-film-gold md:text-2xl">
+              <p className="text-xl font-bold text-white md:text-2xl">
                 {workflowFilmEndCard.brand}
               </p>
-              <p className="mt-3 font-mono text-sm text-ps-film-gold/80">
+              <p className="mt-3 font-mono text-sm text-white/60">
                 {workflowFilmEndCard.url}
               </p>
               <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/60">
@@ -106,7 +105,7 @@ export default function WorkflowFilm() {
 
           <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/10">
             <div
-              className="h-full bg-ps-film-gold/80 transition-all duration-500"
+              className="h-full bg-white/70 transition-all duration-500"
               style={{
                 width: showEndCard
                   ? "100%"
@@ -124,8 +123,8 @@ export default function WorkflowFilm() {
               onClick={() => goToScene(i)}
               className={`rounded-full px-4 py-2 text-xs font-semibold transition-all duration-300 ${
                 !showEndCard && i === sceneIndex
-                  ? "bg-ps-film-gold text-black"
-                  : "border border-white/15 text-white/50 hover:border-ps-film-gold/40 hover:text-white"
+                  ? "bg-white text-ps-navy"
+                  : "border border-white/15 text-white/50 hover:border-white/30 hover:text-white"
               }`}
             >
               {s.id}. {s.title}
