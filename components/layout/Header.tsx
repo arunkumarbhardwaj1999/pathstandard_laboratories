@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
 import Button from "@/components/ui/Button";
@@ -8,6 +9,9 @@ import { navLinks } from "@/lib/content";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const sampleBoxHref = `${pathname}?intent=Sample+Box#contact`;
+  const demoHref = `${pathname}?intent=Demo#contact`;
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm shadow-ps-slate-200/50">
@@ -21,10 +25,10 @@ export default function Header() {
             <span>Hyderabad · Singapore · APAC</span>
           </div>
           <div className="flex items-center gap-6 text-xs font-medium text-white/80">
-            <a href="#use-cases" className="hover:text-white transition-colors">
+            <a href="/use-cases" className="hover:text-white transition-colors">
               For Healthcare Providers
             </a>
-            <a href="#roadmap" className="hover:text-white transition-colors">
+            <a href="/roadmap" className="hover:text-white transition-colors">
               For Partners
             </a>
             <a href="mailto:hello@pathstandard.com" className="hover:text-white transition-colors">
@@ -38,33 +42,6 @@ export default function Header() {
         <Container wide>
           <div className="flex h-[5rem] items-center gap-4 lg:gap-8">
             <Logo size="md" />
-
-            <form
-              className="hidden md:flex flex-1 max-w-md"
-              onSubmit={(e) => {
-                e.preventDefault();
-                window.location.href = "#faq";
-              }}
-            >
-              <label htmlFor="site-search" className="sr-only">Search</label>
-              <div className="relative w-full">
-                <svg
-                  className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ps-slate-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-                <input
-                  id="site-search"
-                  type="search"
-                  placeholder="Search PathStandard..."
-                  className="w-full rounded-full border border-ps-slate-200 bg-ps-slate-50 py-2 pl-10 pr-4 text-sm text-ps-slate-800 placeholder:text-ps-slate-400 focus:border-ps-slate-400 focus:outline-none"
-                />
-              </div>
-            </form>
 
             <div className="ml-auto flex items-center gap-3">
             <nav className="hidden items-center justify-center gap-1 xl:flex">
@@ -80,10 +57,10 @@ export default function Header() {
             </nav>
 
             <div className="hidden items-center gap-3 lg:flex">
-              <Button href="#contact" variant="outline" className="!py-2.5 !px-5 !text-[13px]">
+              <Button href={sampleBoxHref} variant="outline" className="!py-2.5 !px-5 !text-[13px]">
                 Sample Box
               </Button>
-              <Button href="#contact" variant="primary" className="!py-2.5 !px-6 !text-[13px]">
+              <Button href={demoHref} variant="primary" className="!py-2.5 !px-6 !text-[13px]">
                 Request a Demo
               </Button>
             </div>
@@ -109,10 +86,10 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-ps-slate-200 bg-white px-6 py-5 lg:hidden">
+        <div className="animate-fade-up border-t border-ps-slate-200 bg-white px-6 py-5 lg:hidden">
           <div className="mb-4 flex flex-col gap-2 border-b border-ps-slate-100 pb-4 text-sm text-ps-slate-600">
-            <a href="#use-cases" onClick={() => setMenuOpen(false)}>For Healthcare Providers</a>
-            <a href="#roadmap" onClick={() => setMenuOpen(false)}>For Partners</a>
+            <a href="/use-cases" onClick={() => setMenuOpen(false)}>For Healthcare Providers</a>
+            <a href="/roadmap" onClick={() => setMenuOpen(false)}>For Partners</a>
           </div>
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
@@ -126,10 +103,10 @@ export default function Header() {
               </a>
             ))}
             <div className="mt-4 flex flex-col gap-3">
-              <Button href="#contact" variant="outline" className="w-full">
+              <Button href={sampleBoxHref} variant="outline" className="w-full" onClick={() => setMenuOpen(false)}>
                 Request a Sample Box
               </Button>
-              <Button href="#contact" variant="primary" className="w-full">
+              <Button href={demoHref} variant="primary" className="w-full" onClick={() => setMenuOpen(false)}>
                 Request a Demo
               </Button>
             </div>

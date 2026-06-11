@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { slideSKUs } from "@/lib/content";
@@ -32,8 +33,15 @@ export default function SlidePortfolio() {
           {slideSKUs.map((sku, index) => (
             <ScrollReveal key={sku.code} delay={index * 80}>
               <article className="illumina-product-card group flex h-full flex-col overflow-hidden rounded-2xl">
-                <div className="flex h-36 items-center justify-center bg-gradient-to-br from-ps-slate-100 to-white border-b border-ps-slate-200">
-                  <span className="text-4xl font-bold tracking-tight text-ps-slate-300">
+                <div className="relative h-44 overflow-hidden border-b border-ps-slate-200 bg-ps-slate-100">
+                  <Image
+                    src={sku.image}
+                    alt={sku.imageAlt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <span className="absolute left-4 top-4 rounded-md bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-ps-navy">
                     {sku.code}
                   </span>
                 </div>

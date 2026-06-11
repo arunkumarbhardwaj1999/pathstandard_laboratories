@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { missionStatement } from "@/lib/content";
@@ -18,10 +19,14 @@ export default function PlatformIntro() {
 
             <div className="bg-ps-slate-50 p-8 md:p-10 lg:p-12">
               <div className="flex gap-6">
-                <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-sm bg-ps-slate-200">
-                  <div className="flex h-full w-full items-center justify-center text-2xl font-bold text-ps-slate-400">
-                    PS
-                  </div>
+                <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-ps-slate-200">
+                  <Image
+                    src="/images/clinical-pattern.png"
+                    alt="Pathology slide under clinical review"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                  />
                 </div>
                 <blockquote className="text-base leading-relaxed text-ps-slate-700 md:text-lg">
                   &ldquo;We built PathStandard to make slide tracking simple, audit-ready, and easy

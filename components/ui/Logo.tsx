@@ -25,11 +25,11 @@ export default function Logo({ variant = "dark", size = "md" }: LogoProps) {
     >
       <Image
         src="/images/logo.png"
-        alt="CERTUS PathStandard Technologies"
-        width={Math.round(height * 4.2)}
+        alt="PathStandard Technologies"
+        width={Math.round(height * 3.13)}
         height={height}
-        className="h-auto w-auto object-contain"
-        style={{ height, width: "auto", maxWidth: "none" }}
+        className="object-contain"
+        style={{ height, width: "auto" }}
         priority
       />
     </Link>

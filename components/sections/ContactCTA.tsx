@@ -1,18 +1,57 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { roleOptions, intentOptions } from "@/lib/content";
 
+function scrollToForm() {
+  document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 export default function ContactCTA() {
   const [submitted, setSubmitted] = useState(false);
   const [intent, setIntent] = useState("Demo");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const intentParam = params.get("intent");
+    if (intentParam && intentOptions.includes(intentParam)) {
+      setIntent(intentParam);
+    }
+  }, []);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setError(null);
+    setLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+    const payload = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Could not send your request. Please email hello@pathstandard.com."
+      );
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -28,10 +67,22 @@ export default function ContactCTA() {
             />
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="#contact-form" variant="primary">
+              <Button
+                variant="primary"
+                onClick={() => {
+                  setIntent("Demo");
+                  scrollToForm();
+                }}
+              >
                 Request a Demo →
               </Button>
-              <Button href="#contact-form" variant="ghost">
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  setIntent("Sample Box");
+                  scrollToForm();
+                }}
+              >
                 Request a Sample Box
               </Button>
             </div>
@@ -60,6 +111,12 @@ export default function ContactCTA() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <h3 className="text-lg font-semibold">Contact Us</h3>
+
+                {/* Honeypot — hidden from real users, catches bots */}
+                <div className="absolute left-[-9999px]" aria-hidden>
+                  <label htmlFor="company">Company (leave blank)</label>
+                  <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
+                </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
@@ -142,8 +199,23 @@ export default function ContactCTA() {
                   />
                 </div>
 
-                <Button type="submit" variant="primary" className="w-full">
-                  {intent === "Sample Box" ? "Request a Sample Box" : intent === "Demo" ? "Request a Demo" : "Submit Inquiry"}
+                {error && (
+                  <p
+                    role="alert"
+                    className="rounded-lg border border-red-400/40 bg-red-500/10 px-3 py-2 text-sm text-red-200"
+                  >
+                    {error}
+                  </p>
+                )}
+
+                <Button type="submit" variant="primary" className="w-full" disabled={loading}>
+                  {loading
+                    ? "Sending..."
+                    : intent === "Sample Box"
+                    ? "Request a Sample Box"
+                    : intent === "Demo"
+                    ? "Request a Demo"
+                    : "Submit Inquiry"}
                 </Button>
               </form>
             )}

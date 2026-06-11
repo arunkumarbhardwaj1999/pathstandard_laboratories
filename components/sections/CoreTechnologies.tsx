@@ -14,16 +14,17 @@ export default function CoreTechnologies() {
             </h2>
 
             <div className="grid flex-1 gap-4 sm:grid-cols-3">
-              {coreTechnologies.map((tech, i) => (
-                <ScrollReveal key={tech.title} delay={i * 80}>
-                  <div className="tech-card-dark flex h-full flex-col items-center rounded-2xl px-5 py-8 text-center">
-                    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-white/10">
-                      <FeatureIcon name={tech.icon} variant="dark" />
-                    </div>
-                    <h3 className="text-sm font-bold leading-snug text-white">{tech.title}</h3>
-                    <p className="mt-3 text-xs leading-relaxed text-white/60">{tech.description}</p>
+              {coreTechnologies.map((tech) => (
+                <div
+                  key={tech.title}
+                  className="tech-card-dark flex h-full flex-col items-center rounded-2xl px-5 py-8 text-center"
+                >
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-white/10">
+                    <FeatureIcon name={tech.icon} variant="dark" />
                   </div>
-                </ScrollReveal>
+                  <h3 className="text-sm font-bold leading-snug text-white">{tech.title}</h3>
+                  <p className="mt-3 text-xs leading-relaxed text-white/60">{tech.description}</p>
+                </div>
               ))}
             </div>
           </div>

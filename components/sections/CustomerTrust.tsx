@@ -21,7 +21,7 @@ export default function CustomerTrust() {
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={item.image}
-                    alt=""
+                    alt={`${item.partner} — pathology slide traceability and quality documentation`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     sizes="(max-width: 768px) 100vw, 33vw"

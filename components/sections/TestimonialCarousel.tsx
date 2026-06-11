@@ -13,14 +13,14 @@ export default function TestimonialCarousel() {
     <section className="section-padding bg-ps-navy-deep">
       <Container wide>
         <p className="mb-8 text-center text-sm font-semibold text-white/80">
-          Hear what pathology professionals say
+          Real outcomes from pathology workflows
         </p>
 
         <div className="relative overflow-hidden rounded-3xl">
           <div className="relative min-h-[420px] md:min-h-[480px]">
             <Image
               src="/images/packaging-hero.png"
-              alt=""
+              alt="Pathology laboratory using PathStandard serialized slides for NABL-ready traceability"
               fill
               className="object-cover"
               sizes="100vw"

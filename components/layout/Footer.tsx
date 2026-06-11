@@ -5,19 +5,19 @@ import Logo from "@/components/ui/Logo";
 
 const footerLinks = {
   product: [
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Features", href: "#features" },
-    { label: "Compliance", href: "#trust" },
-    { label: "Slide Portfolio", href: "#slide-portfolio" },
-    { label: "Request Demo", href: "#contact" },
+    { label: "How It Works", href: "/how-it-works" },
+    { label: "Products & Slides", href: "/products" },
+    { label: "Compliance", href: "/compliance" },
+    { label: "Use Cases", href: "/use-cases" },
+    { label: "Roadmap", href: "/roadmap" },
   ],
   regulatory: [
-    { label: "ISO 15189:2022", href: "#trust" },
-    { label: "NABL Documentation", href: "#trust" },
-    { label: "CDSCO MDR 2017", href: "#trust" },
-    { label: "ISO 13485 QMS", href: "#trust" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms & Conditions", href: "#" },
+    { label: "ISO 15189:2022", href: "/compliance" },
+    { label: "NABL Documentation", href: "/compliance" },
+    { label: "CDSCO MDR 2017", href: "/compliance" },
+    { label: "ISO 13485 QMS", href: "/compliance" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms & Conditions", href: "/terms" },
   ],
   connect: [
     { label: "hello@pathstandard.com", href: "mailto:hello@pathstandard.com" },

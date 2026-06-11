@@ -14,8 +14,8 @@ export default function FounderStory() {
               <div className="pattern-grid-lines absolute -bottom-8 -left-8 h-4/5 w-4/5" aria-hidden />
               <div className="relative overflow-hidden">
                 <Image
-                  src="/images/brand-spec.png"
-                  alt="PathStandard laboratory traceability"
+                  src="/images/slide-serialized.png"
+                  alt="Serialized PathStandard pathology slide with permanent DataMatrix identity"
                   width={640}
                   height={480}
                   className="h-auto w-full object-cover"

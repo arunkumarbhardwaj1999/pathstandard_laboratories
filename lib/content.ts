@@ -1,10 +1,10 @@
 export const navLinks = [
-  { label: "Workflow", href: "#workflow-film" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Features", href: "#features" },
-  { label: "Compliance", href: "#trust" },
-  { label: "Use Cases", href: "#use-cases" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Products", href: "/products" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "Compliance", href: "/compliance" },
+  { label: "Use Cases", href: "/use-cases" },
+  { label: "Roadmap", href: "/roadmap" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export const userSegments = [
@@ -13,7 +13,7 @@ export const userSegments = [
     subtitle: "Labs, Hospitals & Pathologists",
     description:
       "NABL-ready tracking, instant quality certificates (CoA), and audit-ready records for your lab.",
-    href: "#use-cases",
+    href: "/use-cases",
     cta: "Learn more",
     image: "/images/packaging-hero.png",
   },
@@ -22,7 +22,7 @@ export const userSegments = [
     subtitle: "Distributors, Investors & Digital Pathology",
     description:
       "Platform roadmap, LIMS connections, digital pathology support, and multi-site audit tools.",
-    href: "#roadmap",
+    href: "/roadmap",
     cta: "Learn more",
     image: "/images/brand-spec.png",
   },
@@ -31,9 +31,9 @@ export const userSegments = [
     subtitle: "NABL Coordinators & Quality Managers",
     description:
       "Audit-ready documentation, ISO 15189 templates, and tamper-proof quality records for every slide.",
-    href: "#trust",
+    href: "/compliance",
     cta: "Learn more",
-    image: "/images/packaging-hero.png",
+    image: "/images/datamatrix-scan.png",
   },
 ];
 
@@ -54,7 +54,7 @@ export const realResults = [
     title: "NABL audit prep cut from 2 hours to 10 seconds per slide",
     description:
       "A quality team replaced manual lot searches with instant CoA downloads during their ISO 15189 re-assessment.",
-    href: "#use-cases",
+    href: "/use-cases",
     image: "/images/packaging-hero.png",
   },
   {
@@ -62,7 +62,7 @@ export const realResults = [
     title: "Whole slide images now linked to substrate quality data",
     description:
       "Digital pathology centres attach manufacturer QC records to every scan for AI-ready archives.",
-    href: "#features",
+    href: "/products",
     image: "/images/brand-spec.png",
   },
   {
@@ -70,8 +70,8 @@ export const realResults = [
     title: "ISO 15189:2022 consumable traceability requirements explained",
     description:
       "How serialized slides help NABL-accredited labs meet Clause 6.6 documentation needs.",
-    href: "#trust",
-    image: "/images/packaging-hero.png",
+    href: "/compliance",
+    image: "/images/datamatrix-scan.png",
   },
 ];
 
@@ -266,12 +266,42 @@ export const faqs = [
 ];
 
 export const slideSKUs = [
-  { code: "APS", name: "APTES Charged" },
-  { code: "PLS", name: "Plain Serialized" },
-  { code: "FRS", name: "Frosted End" },
-  { code: "PLC", name: "PLL Coated" },
-  { code: "CYT", name: "Cytology PAP" },
-  { code: "FSH", name: "Adhesive FISH" },
+  {
+    code: "APS",
+    name: "APTES Charged",
+    image: "/images/slide-serialized.png",
+    imageAlt: "APTES charged pathology slide with laser-etched DataMatrix barcode",
+  },
+  {
+    code: "PLS",
+    name: "Plain Serialized",
+    image: "/images/hero-slide-card.png",
+    imageAlt: "Plain serialized pathology slide with permanent barcode identity",
+  },
+  {
+    code: "FRS",
+    name: "Frosted End",
+    image: "/images/clinical-pattern.png",
+    imageAlt: "Frosted-end histology slide for routine pathology workflows",
+  },
+  {
+    code: "PLC",
+    name: "PLL Coated",
+    image: "/images/brand-spec.png",
+    imageAlt: "PLL coated slide with lot-level coating quality records",
+  },
+  {
+    code: "CYT",
+    name: "Cytology PAP",
+    image: "/images/packaging-hero.png",
+    imageAlt: "PAP cytology slide packaging with full traceability documentation",
+  },
+  {
+    code: "FSH",
+    name: "Adhesive FISH",
+    image: "/images/datamatrix-scan.png",
+    imageAlt: "Adhesive FISH slide scanned for molecular pathology traceability",
+  },
 ];
 
 export const roleOptions = [
@@ -379,12 +409,51 @@ export const regulatoryDisclosures = {
   },
 };
 
-export const partnerLogos = [
-  { name: "NABL Aligned" },
-  { name: "ISO 15189" },
-  { name: "ISO 13485" },
-  { name: "CDSCO Class A" },
+export const complianceMatrix = [
+  {
+    standard: "ISO 15189:2022",
+    clause: "Clause 6.6 — Reagents & Consumables",
+    detail:
+      "PathStandard provides a manufacturer-issued Certificate of Analysis with lot number, quality specifications, and pass/fail determination for every slide lot — downloadable as a PDF in under 10 seconds, directly satisfying consumable traceability requirements.",
+  },
+  {
+    standard: "NABL 112A",
+    clause: "Specific Criteria for Medical Laboratories",
+    detail:
+      "NABL requires documented traceability for all reagents and consumables under ISO 15189:2022. PathStandard's cloud quality database provides this lot-level documentation for every slide, with a tamper-evident access log for assessors.",
+  },
+  {
+    standard: "ISO 13485:2016",
+    clause: "Medical Device Quality Management",
+    detail:
+      "PathStandard manufacturing is aligned with ISO 13485 QMS requirements, ensuring systematic quality control and documented production records at the point of manufacture.",
+  },
+  {
+    standard: "CDSCO MDR 2017",
+    clause: "Class A IVD Classification",
+    detail:
+      "Microscope slides are classified as Class A In Vitro Diagnostic devices under India's Medical Device Rules 2017. PathStandard products are manufactured and documented accordingly.",
+  },
+  {
+    standard: "ISO/IEC 16022",
+    clause: "DataMatrix Symbology (ECC200)",
+    detail:
+      "Each slide carries an ECC200 DataMatrix with error correction, ensuring reliable scan readability by any standard 2D barcode reader — even with partial label wear after staining and clearing.",
+  },
+  {
+    standard: "ISO/IEC 15415",
+    clause: "2D Barcode Print Quality",
+    detail:
+      "DataMatrix codes are produced to Grade A print-quality specifications, ensuring consistent readability across phone cameras, lab scanners, and whole-slide imaging systems.",
+  },
 ];
+
+export const partnerLogos = [
+  { name: "NABL", subtitle: "Aligned", icon: "nabl" },
+  { name: "ISO 15189", subtitle: "2022", icon: "iso" },
+  { name: "ISO 13485", subtitle: "QMS", icon: "qms" },
+  { name: "CDSCO", subtitle: "Class A IVD", icon: "cdsco" },
+] as const;
 
 export const coreTechnologies = [
   {
@@ -409,7 +478,7 @@ export const productCategories = [
     title: "Serialized Slides",
     description: "Six slide types with permanent IDs, lot-level records, and NABL-ready documentation.",
     cta: "View all slide types",
-    href: "#slide-portfolio",
+    href: "/products",
     image: "/images/brand-spec.png",
     imageAlt: "PathStandard serialized pathology slides",
   },
@@ -429,7 +498,7 @@ export const platformSpotlight = {
   description:
     "From serialized slides to LIMS integration, lab dashboards, and enterprise audit tools — see where the platform is headed.",
   cta: "View roadmap",
-  href: "#roadmap",
+  href: "/roadmap",
 };
 
 export const productsSectionIntro = {
@@ -447,21 +516,21 @@ export const customerTrust = {
       stat: "10 sec",
       label: "reduction in CoA retrieval time vs manual record search",
       partner: "NABL Labs",
-      href: "#use-cases",
+      href: "/use-cases",
       image: "/images/packaging-hero.png",
     },
     {
       stat: "6",
       label: "serialized slide SKUs with permanent ID and lot-level records",
       partner: "PathStandard",
-      href: "#slide-portfolio",
+      href: "/products",
       image: "/images/brand-spec.png",
     },
     {
       stat: "100%",
       label: "of slides ship with manufacturer-issued quality documentation",
       partner: "ISO 15189",
-      href: "#trust",
+      href: "/compliance",
       image: "/images/packaging-hero.png",
     },
   ],
@@ -476,7 +545,7 @@ export const whyChooseBlocks = [
       "Replace paper lot searches with instant phone scans and PDF quality certificates.",
       "Give quality teams audit-ready records without hours of manual preparation.",
     ],
-    href: "#how-it-works",
+    href: "/how-it-works",
     visual: "workflow",
   },
   {
@@ -487,7 +556,7 @@ export const whyChooseBlocks = [
       "Lot-level surface quality, coating batch, and production data — recorded at manufacture.",
       "Works with histology, cytology, IHC, FISH, and digital pathology workflows.",
     ],
-    href: "#features",
+    href: "/products",
     visual: "data",
   },
   {
@@ -498,7 +567,7 @@ export const whyChooseBlocks = [
       "Scale from a single NABL lab to multi-site hospital networks.",
       "Roadmap includes lab dashboards, API access, and enterprise audit tools.",
     ],
-    href: "#roadmap",
+    href: "/roadmap",
     visual: "platform",
   },
 ];
@@ -510,7 +579,7 @@ export const exploreTabs = [
     title: "Perform efficient histology with traceable slides.",
     description:
       "Serialized H&E and IHC slides with permanent barcodes that survive all staining and clearing steps.",
-    href: "#slide-portfolio",
+    href: "/products",
     image: "/images/brand-spec.png",
   },
   {
@@ -519,7 +588,7 @@ export const exploreTabs = [
     title: "Track every cytology slide from factory to report.",
     description:
       "PAP and cytology SKUs with lot-level quality records and instant CoA access for audit teams.",
-    href: "#slide-portfolio",
+    href: "/products",
     image: "/images/packaging-hero.png",
   },
   {
@@ -528,7 +597,7 @@ export const exploreTabs = [
     title: "Link whole slide images to substrate quality data.",
     description:
       "Barcodes readable from WSI files — attach manufacturer QC records to every digital scan automatically.",
-    href: "#features",
+    href: "/products",
     image: "/images/brand-spec.png",
   },
   {
@@ -537,7 +606,7 @@ export const exploreTabs = [
     title: "Meet ISO 15189 consumable traceability requirements.",
     description:
       "Pre-formatted audit documentation, tamper-proof records, and assessor-ready CoA PDFs in seconds.",
-    href: "#trust",
+    href: "/compliance",
     image: "/images/packaging-hero.png",
   },
   {
@@ -546,18 +615,18 @@ export const exploreTabs = [
     title: "Give your quality team the records they need.",
     description:
       "Immutable manufacture records, role-based access, and full audit logging for every scan and download.",
-    href: "#trust",
+    href: "/compliance",
     image: "/images/brand-spec.png",
   },
 ];
 
 export const solutionModalities = [
-  { title: "Histology & IHC", icon: "coating", href: "#slide-portfolio" },
-  { title: "Cytology & PAP", icon: "scan", href: "#slide-portfolio" },
-  { title: "FISH & Molecular", icon: "barcode", href: "#slide-portfolio" },
-  { title: "Digital Pathology", icon: "scan", href: "#features" },
-  { title: "NABL Audit Prep", icon: "shield", href: "#trust" },
-  { title: "Hospital Procurement", icon: "document", href: "#use-cases" },
+  { title: "Histology & IHC", icon: "coating", href: "/products" },
+  { title: "Cytology & PAP", icon: "scan", href: "/products" },
+  { title: "FISH & Molecular", icon: "barcode", href: "/products" },
+  { title: "Digital Pathology", icon: "scan", href: "/products" },
+  { title: "NABL Audit Prep", icon: "shield", href: "/compliance" },
+  { title: "Hospital Procurement", icon: "document", href: "/use-cases" },
 ];
 
 export const labServices = [

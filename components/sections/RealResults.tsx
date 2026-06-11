@@ -28,7 +28,7 @@ export default function RealResults() {
               <article className="group relative flex min-h-[380px] flex-col justify-end overflow-hidden rounded-3xl">
                 <Image
                   src={item.image}
-                  alt=""
+                  alt={item.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"

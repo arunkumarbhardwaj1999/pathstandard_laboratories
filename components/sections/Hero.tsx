@@ -7,14 +7,14 @@ const heroCards = [
   {
     title: "Serialized Slides",
     description: "Permanent barcode identity on every slide — survives all staining protocols.",
-    image: "/images/brand-spec.png",
-    href: "#slide-portfolio",
+    image: "/images/hero-slide-card.png",
+    href: "/products",
     cta: "View slides",
   },
   {
     title: "CoA & Quality Portal",
     description: "Scan any slide with a phone. Download a PDF quality certificate in under 10 seconds.",
-    image: "/images/packaging-hero.png",
+    image: "/images/hero-scan-card.png",
     href: "https://cert.pathstandard.com",
     cta: "Open portal",
   },
@@ -23,28 +23,27 @@ const heroCards = [
 export default function Hero() {
   return (
     <>
-      <section className="relative overflow-hidden bg-ps-navy-deep text-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-ps-navy-deep via-ps-navy to-ps-navy-light opacity-90" aria-hidden />
-        <div className="hero-glow-dark absolute right-0 top-0 h-[500px] w-[500px] rounded-full" aria-hidden />
+      <section className="relative overflow-hidden bg-gradient-to-b from-white to-ps-slate-50">
+        <div className="pattern-dashed absolute right-0 top-0 h-[340px] w-[340px] opacity-50" aria-hidden />
 
         <Container wide className="relative py-16 md:py-20 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 lg:items-start">
             <div className="animate-fade-up">
-              <p className="text-eyebrow mb-5 !text-white/60">PathStandard Serialized Slides</p>
-              <h1 className="text-hero text-white">
+              <p className="text-eyebrow mb-5">PathStandard Serialized Slides</p>
+              <h1 className="text-hero text-ps-navy">
                 Bringing traceability into your assessment, diagnosis, and treatment.
               </h1>
             </div>
             <div className="animate-fade-up lg:pt-4">
-              <p className="text-lg leading-relaxed text-white/80 md:text-xl">
+              <p className="text-lg leading-relaxed text-ps-slate-600 md:text-xl">
                 PathStandard integrates serialized slide identity with cloud-linked quality records
                 and NABL-ready documentation — no new hardware required in your lab.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button href="#contact" variant="primary">
+                <Button href="/?intent=Demo#contact" variant="primary">
                   Get a demo
                 </Button>
-                <Button href="#contact" variant="ghost">
+                <Button href="/?intent=Sample+Box#contact" variant="outline">
                   Request a sample box
                 </Button>
               </div>
@@ -55,7 +54,7 @@ export default function Hero() {
             {heroCards.map((card) => (
               <article
                 key={card.title}
-                className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm transition-colors hover:border-white/20"
+                className="product-card group"
               >
                 <div className="relative h-52 overflow-hidden md:h-56">
                   <Image
@@ -65,15 +64,11 @@ export default function Hero() {
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ps-navy-deep/90 via-ps-navy-deep/20 to-transparent" />
                 </div>
                 <div className="p-6 md:p-8">
-                  <h2 className="text-xl font-bold text-white md:text-2xl">{card.title}</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-white/70">{card.description}</p>
-                  <a
-                    href={card.href}
-                    className="mt-5 inline-block text-sm font-bold text-white underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white"
-                  >
+                  <h2 className="text-xl font-bold text-ps-navy md:text-2xl">{card.title}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-ps-slate-600">{card.description}</p>
+                  <a href={card.href} className="mt-5 inline-block text-link-underline">
                     {card.cta} →
                   </a>
                 </div>
