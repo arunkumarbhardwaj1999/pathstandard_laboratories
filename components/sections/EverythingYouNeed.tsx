@@ -14,7 +14,7 @@ export default function EverythingYouNeed() {
                 Everything you need for traceable pathology.
               </h2>
               <p className="text-lead mt-6">
-                Plus six slide SKUs, NABL-ready templates, and quality records built for modern
+                Plus five slide SKUs, NABL-ready templates, and quality records built for modern
                 lab workflows.
               </p>
             </div>

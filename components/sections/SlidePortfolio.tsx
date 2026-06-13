@@ -23,7 +23,7 @@ export default function SlidePortfolio() {
               <h2 className="text-section-title text-white">Slide portfolio</h2>
             </div>
             <p className="text-lead lg:pb-1">
-              Six slide types for pathology, histology, cytology, and digital pathology — each with
+              Five slide types for pathology, histology, cytology, and digital pathology — each with
               a permanent ID and lot-level records.
             </p>
           </div>
