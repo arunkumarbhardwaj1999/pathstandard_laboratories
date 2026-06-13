@@ -15,7 +15,7 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/images/logo.png`,
   description:
-    "PathStandard manufactures serialized pathology slides with permanent DataMatrix identity and cloud-linked quality records for NABL-ready, ISO 15189:2022 traceability.",
+    "PathStandard manufactures serialized pathology slides with permanent QR code identity and cloud-linked quality records for NABL-ready, ISO 15189:2022 traceability.",
   email: "hello@pathstandard.com",
   address: [
     { "@type": "PostalAddress", addressLocality: "Hyderabad", addressCountry: "IN" },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     "NABL",
     "ISO 15189",
     "traceability",
-    "DataMatrix",
+    "QR code",
     "Certificate of Analysis",
   ],
   openGraph: {

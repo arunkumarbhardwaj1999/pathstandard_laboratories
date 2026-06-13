@@ -8,7 +8,7 @@ import { faqs } from "@/lib/content";
 export const metadata: Metadata = {
   title: "FAQ — PathStandard Technologies",
   description:
-    "Answers to common questions about PathStandard serialized slides: how the DataMatrix is applied, scanning, barcode compatibility, data retention, and device classification.",
+    "Answers to common questions about PathStandard serialized slides: how the QR code is applied, scanning, barcode compatibility, data retention, and device classification.",
 };
 
 const faqSchema = {
@@ -28,7 +28,7 @@ export default function FAQPage() {
       <PageHeader
         eyebrow="FAQ"
         title="Frequently asked questions"
-        description="Clear, specific answers about how PathStandard serialized slides, the DataMatrix barcode, the Certificate of Analysis portal, scanner compatibility, data retention, and regulatory classification work for your laboratory."
+        description="Clear, specific answers about how PathStandard serialized slides, the QR code, the Certificate of Analysis portal, scanner compatibility, data retention, and regulatory classification work for your laboratory."
       />
       <FAQ />
       <ContactCTA />
