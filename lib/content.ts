@@ -30,7 +30,7 @@ export const userSegments = [
     title: "For Quality & Compliance",
     subtitle: "NABL Coordinators & Quality Managers",
     description:
-      "Audit-ready documentation, ISO 15189 templates, and tamper-proof quality records for every slide.",
+      "Audit-ready documentation, ISO 15189 templates, and immutable quality records for every slide.",
     href: "/compliance",
     cta: "Learn more",
     image: "/images/datamatrix-scan.png",
@@ -108,8 +108,8 @@ export const heroStats = [
 export const trustBadges = [
   "ISO 15189:2022",
   "ISO 13485 QMS",
-  "CDSCO Class A IVD",
-  "ISO/IEC 16022 DataMatrix",
+  "CDSCO Class A IVD — registration in progress",
+  "ISO/IEC 18004 QR Code",
   "NABL Aligned",
 ];
 
@@ -122,7 +122,7 @@ export const problemPoints = [
 ];
 
 export const solutionPoints = [
-  "A permanent laser-etched barcode on every slide — survives all staining steps.",
+  "A permanent laser-etched QR code on every slide — designed to withstand standard staining and clearing; validation in progress.",
   "Lot-level quality data recorded at manufacture (surface quality, coating batch, and more).",
   "Scan any slide with your phone → PDF quality certificate (CoA) in under 10 seconds.",
   "Full digital tracking from manufacture to archive.",
@@ -270,7 +270,7 @@ export const slideSKUs = [
     code: "APS",
     name: "APTES Charged",
     image: "/images/slide-serialized.png",
-    imageAlt: "APTES charged pathology slide with laser-etched DataMatrix barcode",
+    imageAlt: "APTES charged pathology slide with laser-etched QR code",
   },
   {
     code: "PLS",
@@ -403,7 +403,7 @@ export const regulatoryDisclosures = {
     title: "Quality & Regulatory Information",
     paragraphs: [
       "PathStandard manufacturing is aligned with ISO 13485 Quality Management System requirements. Documentation supports ISO 15189:2022 Clause 6.6 consumable traceability needs for NABL-accredited laboratories.",
-      "Slide barcodes comply with ISO/IEC 16022 DataMatrix standards. Quality records are stored with encryption and maintained as tamper-evident, immutable entries from the point of manufacture.",
+      "Slide QR codes comply with ISO/IEC 18004 2D barcode standards. Quality records are stored with encryption and maintained as immutable entries from the point of manufacture.",
       "For regulatory inquiries, contact hello@pathstandard.com. Product specifications are subject to change. Intended for laboratory and healthcare professional use in India and APAC markets.",
     ],
   },
@@ -436,15 +436,15 @@ export const complianceMatrix = [
   },
   {
     standard: "ISO/IEC 16022",
-    clause: "DataMatrix Symbology (ECC200)",
+    clause: "QR Code Symbology (ISO/IEC 18004)",
     detail:
-      "Each slide carries an ECC200 DataMatrix with error correction, ensuring reliable scan readability by any standard 2D barcode reader — even with partial label wear after staining and clearing.",
+      "Each slide carries a QR code with error correction, ensuring reliable scan readability by any phone camera or 2D barcode reader — even with partial label wear after staining and clearing.",
   },
   {
     standard: "ISO/IEC 15415",
     clause: "2D Barcode Print Quality",
     detail:
-      "DataMatrix codes are produced to Grade A print-quality specifications, ensuring consistent readability across phone cameras, lab scanners, and whole-slide imaging systems.",
+      "QR codes are produced to Grade A print-quality specifications, ensuring consistent readability across phone cameras, lab scanners, and whole-slide imaging systems.",
   },
 ];
 
@@ -605,7 +605,7 @@ export const exploreTabs = [
     label: "NABL Compliance",
     title: "Meet ISO 15189 consumable traceability requirements.",
     description:
-      "Pre-formatted audit documentation, tamper-proof records, and assessor-ready CoA PDFs in seconds.",
+      "Pre-formatted audit documentation, immutable records, and assessor-ready CoA PDFs in seconds.",
     href: "/compliance",
     image: "/images/packaging-hero.png",
   },

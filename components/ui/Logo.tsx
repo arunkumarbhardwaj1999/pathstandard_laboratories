@@ -26,7 +26,7 @@ export default function Logo({ variant = "dark", size = "md" }: LogoProps) {
       <Image
         src="/images/logo.png"
         alt="PathStandard Technologies"
-        width={Math.round(height * 3.13)}
+        width={Math.round(height * 2.73)}
         height={height}
         className="object-contain"
         style={{ height, width: "auto" }}

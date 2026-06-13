@@ -15,7 +15,7 @@ export default function FounderStory() {
               <div className="relative overflow-hidden">
                 <Image
                   src="/images/slide-serialized.png"
-                  alt="Serialized PathStandard pathology slide with permanent DataMatrix identity"
+                  alt="Serialized PathStandard pathology slide with permanent QR code identity"
                   width={640}
                   height={480}
                   className="h-auto w-full object-cover"

@@ -22,7 +22,7 @@ export default function Header() {
               cert.pathstandard.com
             </a>
             <span className="text-white/30">|</span>
-            <span>Hyderabad · Singapore · APAC</span>
+            <span>INDIA · SINGAPORE · APAC · MEA · WE · USA</span>
           </div>
           <div className="flex items-center gap-6 text-xs font-medium text-white/80">
             <a href="/use-cases" className="hover:text-white transition-colors">

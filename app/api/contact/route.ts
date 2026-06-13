@@ -36,15 +36,7 @@ export async function POST(request: Request) {
   }
 
   // Server-side validation (never trust the client).
-  const required: (keyof ContactPayload)[] = [
-    "name",
-    "lab",
-    "role",
-    "intent",
-    "city",
-    "phone",
-    "email",
-  ];
+  const required: (keyof ContactPayload)[] = ["name", "email", "phone"];
   const missing = required.filter((f) => !data[f] || `${data[f]}`.trim() === "");
   if (missing.length > 0) {
     return NextResponse.json(

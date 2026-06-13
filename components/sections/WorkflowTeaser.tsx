@@ -53,7 +53,7 @@ export default function WorkflowTeaser() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/datamatrix-scan.png"
-                  alt="Pathologist scanning a PathStandard slide DataMatrix barcode in the lab"
+                  alt="Pathologist scanning a PathStandard slide QR code in the lab"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

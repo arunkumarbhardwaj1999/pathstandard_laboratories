@@ -39,7 +39,7 @@ export default function Footer() {
             <Logo size="md" />
             <div className="mt-4 h-px w-12 bg-ps-navy" aria-hidden />
             <p className="mt-6 text-sm leading-relaxed text-ps-slate-500">
-              Hyderabad, India · Singapore · APAC
+              INDIA · SINGAPORE · APAC · MEA · WE · USA
             </p>
           </div>
 

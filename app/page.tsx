@@ -5,7 +5,6 @@ import ProblemSolution from "@/components/sections/ProblemSolution";
 import WorkflowTeaser from "@/components/sections/WorkflowTeaser";
 import CoreTechnologies from "@/components/sections/CoreTechnologies";
 import Comparison from "@/components/sections/Comparison";
-import CustomerTrust from "@/components/sections/CustomerTrust";
 import FounderStory from "@/components/sections/FounderStory";
 import ContactCTA from "@/components/sections/ContactCTA";
 
@@ -19,7 +18,6 @@ export default function Home() {
       <WorkflowTeaser />
       <CoreTechnologies />
       <Comparison />
-      <CustomerTrust />
       <FounderStory />
       <ContactCTA />
     </>

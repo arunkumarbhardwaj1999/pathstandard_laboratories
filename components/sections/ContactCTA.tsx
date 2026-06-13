@@ -88,7 +88,7 @@ export default function ContactCTA() {
             </div>
 
             <p className="mt-8 text-sm text-ps-slate-400">
-              Made in India · ISO 13485 aligned · Singapore HQ · CDSCO Class A IVD
+              Made in India · ISO 13485 aligned · Singapore HQ · CDSCO Class A IVD — registration in progress
             </p>
           </div>
 
@@ -127,18 +127,18 @@ export default function ContactCTA() {
                   </div>
                   <div>
                     <label htmlFor="lab" className="mb-1 block text-xs font-medium text-ps-slate-400">
-                      Lab / Hospital Name *
+                      Lab / Hospital Name
                     </label>
-                    <input id="lab" name="lab" required className="form-input-dark" placeholder="Apollo Diagnostics" />
+                    <input id="lab" name="lab" className="form-input-dark" placeholder="Apollo Diagnostics" />
                   </div>
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label htmlFor="role" className="mb-1 block text-xs font-medium text-ps-slate-400">
-                      Your Role *
+                      Your Role
                     </label>
-                    <select id="role" name="role" required className="form-input-dark">
+                    <select id="role" name="role" className="form-input-dark">
                       <option value="">Select role</option>
                       {roleOptions.map((role) => (
                         <option key={role} value={role}>{role}</option>
@@ -147,12 +147,11 @@ export default function ContactCTA() {
                   </div>
                   <div>
                     <label htmlFor="intent" className="mb-1 block text-xs font-medium text-ps-slate-400">
-                      What are you looking for? *
+                      What are you looking for?
                     </label>
                     <select
                       id="intent"
                       name="intent"
-                      required
                       value={intent}
                       onChange={(e) => setIntent(e.target.value)}
                       className="form-input-dark"
@@ -167,9 +166,9 @@ export default function ContactCTA() {
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label htmlFor="city" className="mb-1 block text-xs font-medium text-ps-slate-400">
-                      City & State *
+                      City & State
                     </label>
-                    <input id="city" name="city" required className="form-input-dark" placeholder="Hyderabad, Telangana" />
+                    <input id="city" name="city" className="form-input-dark" placeholder="Hyderabad, Telangana" />
                   </div>
                   <div>
                     <label htmlFor="phone" className="mb-1 block text-xs font-medium text-ps-slate-400">
