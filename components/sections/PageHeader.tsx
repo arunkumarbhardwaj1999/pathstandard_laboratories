@@ -10,12 +10,13 @@ interface PageHeaderProps {
 // keyword-rich lead paragraph, matching the clean & clinical layout.
 export default function PageHeader({ eyebrow, title, description }: PageHeaderProps) {
   return (
-    <section className="border-b border-ps-slate-100 bg-ps-slate-50">
+    <section className="relative overflow-hidden border-b border-white/10 bg-ps-navy-deep text-white">
+      <div className="absolute -right-24 -top-24 h-[360px] w-[360px] rounded-full bg-ps-teal/15 blur-[110px]" aria-hidden />
       <Container>
-        <div className="max-w-3xl py-16 md:py-20">
-          <p className="text-eyebrow">{eyebrow}</p>
-          <h1 className="text-section-title mt-3">{title}</h1>
-          <p className="text-lead mt-5">{description}</p>
+        <div className="relative max-w-3xl py-16 md:py-20">
+          <p className="text-eyebrow !text-ps-teal-light">{eyebrow}</p>
+          <h1 className="text-section-title mt-3 text-white">{title}</h1>
+          <p className="mt-5 text-lg leading-relaxed text-white/70">{description}</p>
         </div>
       </Container>
     </section>

@@ -29,11 +29,11 @@ export default function ScrollWorkflow() {
   const step = howItWorksSteps[activeStep];
 
   return (
-    <section id="how-it-works" className="bg-white border-y border-ps-slate-200">
+    <section id="how-it-works" className="bg-ps-navy border-y border-white/10">
       <Container wide className="py-16 md:py-20">
         <div className="mb-12 text-center">
           <p className="text-eyebrow mb-3">Compliance Workflow</p>
-          <h2 className="text-section-title text-ps-navy">
+          <h2 className="text-section-title text-white">
             See how traceability works step by step
           </h2>
           <p className="text-lead mx-auto mt-4 max-w-2xl">
@@ -43,13 +43,13 @@ export default function ScrollWorkflow() {
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <div className="rounded-3xl border border-ps-slate-200 bg-ps-slate-50 p-8 md:p-10 transition-all duration-500">
+            <div className="rounded-3xl border border-white/10 bg-ps-navy-deep p-8 md:p-10 transition-all duration-500">
               <span className="text-6xl font-bold text-ps-slate-200">
                 {String(step.step).padStart(2, "0")}
               </span>
               <p className="text-eyebrow mt-4 mb-2">Step {step.step} of {howItWorksSteps.length}</p>
-              <h3 className="text-2xl font-bold text-ps-navy md:text-3xl">{step.title}</h3>
-              <p className="mt-4 text-base leading-relaxed text-ps-slate-600">{step.description}</p>
+              <h3 className="text-2xl font-bold text-white md:text-3xl">{step.title}</h3>
+              <p className="mt-4 text-base leading-relaxed text-white/70">{step.description}</p>
               <div className="mt-8 flex gap-1.5">
                 {howItWorksSteps.map((_, index) => (
                   <div
@@ -72,15 +72,15 @@ export default function ScrollWorkflow() {
                 }}
                 className={`scroll-workflow-step rounded-2xl border p-6 md:p-8 transition-all duration-500 ${
                   activeStep === index
-                    ? "border-ps-navy/30 bg-white shadow-[0_12px_40px_rgba(15,23,42,0.08)]"
-                    : "border-ps-slate-200 bg-ps-slate-50/50 opacity-60"
+                    ? "border-ps-navy/30 bg-ps-navy shadow-[0_12px_40px_rgba(15,23,42,0.08)]"
+                    : "border-white/10 bg-ps-navy-deep/50 opacity-60"
                 }`}
               >
-                <span className="text-xs font-bold uppercase tracking-widest text-ps-slate-500">
+                <span className="text-xs font-bold uppercase tracking-widest text-white/50">
                   Step {s.step}
                 </span>
-                <h4 className="mt-2 text-xl font-bold text-ps-navy">{s.title}</h4>
-                <p className="mt-3 text-sm leading-relaxed text-ps-slate-600">{s.description}</p>
+                <h4 className="mt-2 text-xl font-bold text-white">{s.title}</h4>
+                <p className="mt-3 text-sm leading-relaxed text-white/70">{s.description}</p>
               </div>
             ))}
           </div>

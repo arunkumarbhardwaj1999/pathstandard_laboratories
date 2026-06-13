@@ -32,26 +32,26 @@ function scrollToTop() {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ps-slate-200 bg-white">
+    <footer className="border-t border-white/10 bg-ps-navy-deep text-white">
       <Container wide className="section-padding-sm">
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between">
           <div className="lg:max-w-xs">
-            <Logo size="md" />
-            <div className="mt-4 h-px w-12 bg-ps-navy" aria-hidden />
-            <p className="mt-6 text-sm leading-relaxed text-ps-slate-500">
+            <Logo size="md" variant="light" />
+            <div className="mt-4 h-px w-12 bg-ps-teal" aria-hidden />
+            <p className="mt-6 text-sm leading-relaxed text-white/50">
               INDIA · SINGAPORE · APAC · MEA · WE · USA
             </p>
           </div>
 
           <div className="grid flex-1 gap-10 sm:grid-cols-3 lg:max-w-2xl">
             <div>
-              <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-ps-slate-900">
+              <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-white">
                 Product
               </h3>
-              <ul className="space-y-2.5 text-sm text-ps-slate-600">
+              <ul className="space-y-2.5 text-sm text-white/65">
                 {footerLinks.product.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="hover:text-ps-navy transition-colors">
+                    <a href={link.href} className="hover:text-ps-teal-light transition-colors">
                       {link.label}
                     </a>
                   </li>
@@ -60,13 +60,13 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-ps-slate-900">
+              <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-white">
                 Regulatory
               </h3>
-              <ul className="space-y-2.5 text-sm text-ps-slate-600">
+              <ul className="space-y-2.5 text-sm text-white/65">
                 {footerLinks.regulatory.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="hover:text-ps-navy transition-colors">
+                    <a href={link.href} className="hover:text-ps-teal-light transition-colors">
                       {link.label}
                     </a>
                   </li>
@@ -75,13 +75,13 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-ps-slate-900">
+              <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-white">
                 Contact
               </h3>
-              <ul className="space-y-2.5 text-sm text-ps-slate-600">
+              <ul className="space-y-2.5 text-sm text-white/65">
                 {footerLinks.connect.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="hover:text-ps-navy transition-colors">
+                    <a href={link.href} className="hover:text-ps-teal-light transition-colors">
                       {link.label}
                     </a>
                   </li>
@@ -91,18 +91,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-ps-slate-200 pt-8 sm:flex-row">
-          <p className="text-xs text-ps-slate-500">
+        <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row">
+          <p className="text-xs text-white/50">
             © 2026 PathStandard Technologies Pvt. Ltd. & Pte. Ltd. · All specifications subject to change
           </p>
 
           <button
             type="button"
             onClick={scrollToTop}
-            className="group flex flex-col items-center gap-1 text-ps-slate-500 hover:text-ps-navy transition-colors"
+            className="group flex flex-col items-center gap-1 text-white/50 hover:text-white transition-colors"
             aria-label="Back to top"
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-ps-slate-300 group-hover:border-ps-navy transition-colors">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 group-hover:border-white transition-colors">
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
               </svg>

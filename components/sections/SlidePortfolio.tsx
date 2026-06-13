@@ -14,13 +14,13 @@ const skuDescriptions: Record<string, string> = {
 
 export default function SlidePortfolio() {
   return (
-    <section id="slide-portfolio" className="section-padding-sm bg-ps-slate-50 border-t border-ps-slate-200">
+    <section id="slide-portfolio" className="section-padding-sm bg-ps-navy-deep border-t border-white/10">
       <Container wide>
         <ScrollReveal>
           <div className="mb-12 grid gap-8 lg:grid-cols-2 lg:items-end">
             <div className="flex gap-5">
               <div className="accent-bar" />
-              <h2 className="text-section-title text-ps-navy">Slide portfolio</h2>
+              <h2 className="text-section-title text-white">Slide portfolio</h2>
             </div>
             <p className="text-lead lg:pb-1">
               Six slide types for pathology, histology, cytology, and digital pathology — each with
@@ -33,7 +33,7 @@ export default function SlidePortfolio() {
           {slideSKUs.map((sku, index) => (
             <ScrollReveal key={sku.code} delay={index * 80}>
               <article className="illumina-product-card group flex h-full flex-col overflow-hidden rounded-2xl">
-                <div className="relative h-44 overflow-hidden border-b border-ps-slate-200 bg-ps-slate-100">
+                <div className="relative h-44 overflow-hidden border-b border-white/10 bg-ps-navy">
                   <Image
                     src={sku.image}
                     alt={sku.imageAlt}
@@ -46,11 +46,11 @@ export default function SlidePortfolio() {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6 md:p-8">
-                  <p className="text-xs font-bold uppercase tracking-widest text-ps-slate-400">
+                  <p className="text-xs font-bold uppercase tracking-widest text-white/45">
                     {sku.code}
                   </p>
-                  <h3 className="mt-1 text-lg font-bold text-ps-navy">{sku.name}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-ps-slate-600">
+                  <h3 className="mt-1 text-lg font-bold text-white">{sku.name}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-white/70">
                     {skuDescriptions[sku.code]}
                   </p>
                   <a href="#contact" className="text-link-underline mt-5 inline-block w-fit">

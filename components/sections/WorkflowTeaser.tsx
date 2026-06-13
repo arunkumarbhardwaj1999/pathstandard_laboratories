@@ -6,15 +6,15 @@ import { howItWorksSteps } from "@/lib/content";
 
 export default function WorkflowTeaser() {
   return (
-    <section id="workflow-preview" className="section-padding bg-white border-b border-ps-slate-200">
+    <section id="workflow-preview" className="section-padding bg-ps-navy-deep text-white border-b border-white/10">
       <Container wide>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
           <ScrollReveal>
-            <p className="text-eyebrow mb-3">How It Works</p>
-            <h2 className="text-section-title text-ps-navy">
+            <p className="text-eyebrow mb-3 !text-ps-teal-light">How It Works</p>
+            <h2 className="text-section-title text-white">
               From manufacture to archive — step by step
             </h2>
-            <p className="text-lead mt-4">
+            <p className="mt-4 text-lg leading-relaxed text-white/70">
               Every PathStandard slide follows a five-stage chain of custody. Scroll the interactive
               workflow on our dedicated page, or preview the stages below.
             </p>
@@ -23,14 +23,14 @@ export default function WorkflowTeaser() {
               {howItWorksSteps.map((step) => (
                 <li
                   key={step.step}
-                  className="flex gap-4 rounded-xl border border-ps-slate-200 bg-ps-slate-50 p-4"
+                  className="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-4"
                 >
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ps-navy text-sm font-bold text-white">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ps-teal text-sm font-bold text-white">
                     {step.step}
                   </span>
                   <div>
-                    <p className="font-semibold text-ps-navy">{step.title}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-ps-slate-600 line-clamp-2">
+                    <p className="font-semibold text-white">{step.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-white/65 line-clamp-2">
                       {step.description}
                     </p>
                   </div>
@@ -42,7 +42,7 @@ export default function WorkflowTeaser() {
               <Button href="/how-it-works" variant="primary">
                 Watch the full workflow →
               </Button>
-              <Button href="/how-it-works#workflow-film" variant="outline">
+              <Button href="/how-it-works#workflow-film" variant="ghost">
                 Play workflow film
               </Button>
             </div>

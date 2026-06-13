@@ -99,7 +99,7 @@ export const trustPillars = [
 ];
 
 export const heroStats = [
-  { value: "6", label: "Slide SKUs" },
+  { value: "5", label: "Slide SKUs" },
   { value: "10 sec", label: "CoA Download" },
   { value: "ISO 15189", label: "2022 Aligned" },
   { value: "∞", label: "Permanent ID" },
@@ -283,12 +283,6 @@ export const slideSKUs = [
     name: "Frosted End",
     image: "/images/clinical-pattern.png",
     imageAlt: "Frosted-end histology slide for routine pathology workflows",
-  },
-  {
-    code: "PLC",
-    name: "PLL Coated",
-    image: "/images/brand-spec.png",
-    imageAlt: "PLL coated slide with lot-level coating quality records",
   },
   {
     code: "CYT",
@@ -476,7 +470,7 @@ export const coreTechnologies = [
 export const productCategories = [
   {
     title: "Serialized Slides",
-    description: "Six slide types with permanent IDs, lot-level records, and NABL-ready documentation.",
+    description: "Five slide types with permanent IDs, lot-level records, and NABL-ready documentation.",
     cta: "View all slide types",
     href: "/products",
     image: "/images/brand-spec.png",

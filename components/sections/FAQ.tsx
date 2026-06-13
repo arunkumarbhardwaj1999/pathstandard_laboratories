@@ -9,7 +9,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="section-padding bg-ps-slate-50">
+    <section id="faq" className="section-padding bg-ps-navy-deep">
       <Container>
         <SectionHeading
           label="FAQ"
@@ -17,7 +17,7 @@ export default function FAQ() {
           align="center"
         />
 
-        <div className="mx-auto mt-12 max-w-3xl divide-y divide-ps-slate-200 rounded-xl border border-ps-slate-200 bg-white">
+        <div className="mx-auto mt-12 max-w-3xl divide-y divide-ps-slate-200 rounded-xl border border-white/10 bg-ps-navy">
           {faqs.map((faq, index) => (
             <div key={faq.q}>
               <button
@@ -26,9 +26,9 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 aria-expanded={openIndex === index}
               >
-                <span className="pr-4 font-semibold text-ps-slate-900">{faq.q}</span>
+                <span className="pr-4 font-semibold text-white">{faq.q}</span>
                 <svg
-                  className={`h-5 w-5 shrink-0 text-ps-navy transition-transform ${openIndex === index ? "rotate-180" : ""}`}
+                  className={`h-5 w-5 shrink-0 text-white transition-transform ${openIndex === index ? "rotate-180" : ""}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -37,7 +37,7 @@ export default function FAQ() {
                 </svg>
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-5 text-sm leading-relaxed text-ps-slate-600">
+                <div className="px-6 pb-5 text-sm leading-relaxed text-white/70">
                   {faq.a}
                 </div>
               )}

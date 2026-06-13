@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/sections/PageHeader";
-import ScrollWorkflow from "@/components/sections/ScrollWorkflow";
+import HorizontalTimeline from "@/components/sections/HorizontalTimeline";
 import WorkflowFilm from "@/components/sections/WorkflowFilm";
 import PlatformEcosystem from "@/components/sections/PlatformEcosystem";
 import ContactCTA from "@/components/sections/ContactCTA";
@@ -19,7 +19,7 @@ export default function HowItWorksPage() {
         title="From manufacture to archive — a complete chain of custody"
         description="Every PathStandard slide is serialized and quality-recorded at production, ships with a batch Certificate of Analysis, and can be scanned by any phone in the lab to retrieve its full manufacturer QC record. See the five-step workflow that gives each slide a permanent, auditable identity."
       />
-      <ScrollWorkflow />
+      <HorizontalTimeline />
       <WorkflowFilm />
       <PlatformEcosystem />
       <ContactCTA />

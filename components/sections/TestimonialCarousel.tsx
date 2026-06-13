@@ -61,7 +61,7 @@ export default function TestimonialCarousel() {
                 type="button"
                 onClick={() => setActive(i)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  i === active ? "w-8 bg-white" : "w-2 bg-white/40 hover:bg-white/60"
+                  i === active ? "w-8 bg-ps-navy" : "w-2 bg-white/40 hover:bg-white/60"
                 }`}
                 aria-label={`Go to testimonial ${i + 1}`}
               />

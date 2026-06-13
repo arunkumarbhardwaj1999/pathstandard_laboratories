@@ -86,7 +86,7 @@ body {
 }
 
 .text-lead {
-  @apply text-lg font-normal leading-relaxed text-ps-slate-600 md:text-xl md:leading-relaxed;
+  @apply text-lg font-normal leading-relaxed text-white/70 md:text-xl md:leading-relaxed;
 }
 
 .text-highlight {
@@ -165,25 +165,25 @@ body {
 }
 
 .benchling-stat-card {
-  @apply border border-ps-slate-200 bg-white transition-shadow duration-300;
+  @apply border border-white/10 bg-white/[0.04] transition-shadow duration-300;
 }
 .benchling-stat-card:hover {
   @apply shadow-[0_16px_48px_rgba(15,23,42,0.08)];
 }
 
 .benchling-visual-panel {
-  @apply rounded-3xl bg-ps-slate-100;
+  @apply rounded-3xl bg-white/[0.04];
 }
 
 .benchling-service-card {
-  @apply border border-ps-slate-200 shadow-[0_4px_24px_rgba(15,23,42,0.04)] transition-shadow duration-300;
+  @apply border border-white/10 bg-white/[0.03] transition-shadow duration-300;
 }
 .benchling-service-card:hover {
   @apply shadow-[0_12px_40px_rgba(15,23,42,0.08)];
 }
 
 .illumina-product-card {
-  @apply border border-ps-slate-200 bg-gradient-to-b from-white to-ps-slate-50 transition-shadow duration-300;
+  @apply border border-white/10 bg-white/[0.04] transition-shadow duration-300;
 }
 .illumina-product-card:hover {
   @apply shadow-[0_16px_48px_rgba(15,23,42,0.08)];
@@ -195,7 +195,7 @@ body {
 }
 
 .text-link-underline {
-  @apply text-sm font-bold text-ps-navy underline decoration-ps-slate-300 underline-offset-4 transition-colors hover:decoration-ps-navy;
+  @apply text-sm font-bold text-ps-teal-light underline decoration-ps-teal/40 underline-offset-4 transition-colors hover:decoration-ps-teal-light;
 }
 
 .spotlight-banner {
@@ -203,37 +203,37 @@ body {
 }
 
 .feature-card {
-  @apply rounded-lg border border-ps-slate-200 bg-white p-8 transition-all duration-500 ease-out;
+  @apply rounded-lg border border-white/10 bg-white/[0.04] p-8 transition-all duration-500 ease-out;
 }
 .feature-card:hover {
-  @apply border-ps-slate-300 shadow-[0_8px_30px_rgba(15,23,42,0.08)] -translate-y-0.5;
+  @apply border-white/20 bg-white/[0.06] -translate-y-0.5;
 }
 
 .product-card {
-  @apply flex flex-col rounded-lg border border-ps-slate-200 bg-white overflow-hidden transition-all duration-500;
+  @apply flex flex-col rounded-lg border border-white/10 bg-white/[0.04] overflow-hidden transition-all duration-500;
 }
 .product-card:hover {
   @apply shadow-[0_12px_40px_rgba(15,23,42,0.1)] -translate-y-1;
 }
 
 .data-card {
-  @apply rounded-lg border border-ps-slate-200 bg-ps-slate-50 p-6 md:p-8;
+  @apply rounded-lg border border-white/10 bg-white/[0.04] p-6 md:p-8;
 }
 
 .clinical-card {
-  @apply rounded-lg border border-ps-slate-200 bg-white p-8 md:p-10;
+  @apply rounded-lg border border-white/10 bg-white/[0.04] p-8 md:p-10;
 }
 
 .stat-value {
-  @apply text-3xl font-bold tracking-tight text-ps-slate-900 md:text-[2.5rem];
+  @apply text-3xl font-bold tracking-tight text-white md:text-[2.5rem];
 }
 
 .stat-label {
-  @apply mt-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-ps-slate-500;
+  @apply mt-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50;
 }
 
 .pattern-dashed {
-  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
   background-size: 12px 12px;
 }
 
@@ -244,7 +244,7 @@ body {
   @apply bg-ps-navy text-white shadow-lg;
 }
 .step-pill-inactive {
-  @apply bg-white text-ps-slate-600 border border-ps-slate-200 hover:border-ps-slate-400;
+  @apply bg-white/[0.05] text-white/70 border border-white/15 hover:border-white/30;
 }
 
 .scroll-reveal {

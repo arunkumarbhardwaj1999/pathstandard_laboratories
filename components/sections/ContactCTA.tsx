@@ -61,8 +61,8 @@ export default function ContactCTA() {
           <div>
             <SectionHeading
               label="Get Started"
-              title="Start with one box. See the value yourself."
-              description="Request a sample box of PathStandard slides. Scan the barcode. Download a quality certificate (CoA) in under 10 seconds."
+              title="See your first serialized slide."
+              description="Request an evaluation kit and experience permanent slide identity, cloud traceability, and digital provenance first-hand."
               dark
             />
 
@@ -74,7 +74,7 @@ export default function ContactCTA() {
                   scrollToForm();
                 }}
               >
-                Request a Demo →
+                Request Evaluation Kit →
               </Button>
               <Button
                 variant="ghost"

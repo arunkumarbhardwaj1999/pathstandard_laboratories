@@ -1,20 +1,19 @@
 import Container from "@/components/ui/Container";
-import PartnerBadge from "@/components/ui/PartnerBadge";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { trustBadges, trustPillars, partnerLogos } from "@/lib/content";
+import { trustBadges, trustPillars } from "@/lib/content";
 
 export default function TrustBar() {
   return (
-    <section id="trust" className="section-padding bg-ps-slate-50">
+    <section id="trust" className="section-padding bg-ps-navy text-white">
       <Container wide>
         <ScrollReveal>
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-10 mb-14">
             <div className="md:max-w-sm">
-              <p className="text-eyebrow mb-2">Trust Framework</p>
-              <h2 className="text-section-title text-ps-navy">Built for modern pathology workflows</h2>
-              <div className="mt-5 h-px w-12 bg-ps-navy" aria-hidden />
+              <p className="text-eyebrow mb-2 !text-ps-teal-light">Trust Framework</p>
+              <h2 className="text-section-title text-white">Built for modern pathology workflows</h2>
+              <div className="mt-5 h-px w-12 bg-ps-teal" aria-hidden />
             </div>
-            <p className="text-lead max-w-2xl md:pt-2">
+            <p className="max-w-2xl text-lg leading-relaxed text-white/70 md:pt-2">
               Every slide gets a permanent ID, batch-level records, and quality documents that are
               easy to show during audits.
             </p>
@@ -24,49 +23,33 @@ export default function TrustBar() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {trustPillars.map((pillar, i) => (
             <ScrollReveal key={pillar.title} delay={i * 80}>
-              <div className="data-card h-full text-center lg:text-left">
-                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-white border border-ps-slate-200 lg:mx-0">
-                  <svg className="h-6 w-6 text-ps-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <div className="h-full rounded-2xl border border-white/10 bg-white/[0.04] p-6 text-center md:p-8 lg:text-left">
+                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-white/15 bg-ps-teal/15 lg:mx-0">
+                  <svg className="h-6 w-6 text-ps-teal-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-ps-slate-900">{pillar.title}</h3>
-                <p className="mt-1 text-[11px] font-bold uppercase tracking-widest text-ps-slate-500">
+                <h3 className="text-lg font-bold text-white">{pillar.title}</h3>
+                <p className="mt-1 text-[11px] font-bold uppercase tracking-widest text-ps-teal-light/80">
                   {pillar.subtitle}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-ps-slate-600">{pillar.description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-white/65">{pillar.description}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
 
         <ScrollReveal delay={150}>
-          <div className="mt-16 rounded-lg border border-ps-slate-200 bg-white p-8 md:p-10">
-            <p className="text-center text-eyebrow mb-6">Aligned with / Compliant with</p>
+          <div className="mt-16 rounded-2xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
+            <p className="mb-6 text-center text-eyebrow !text-white/50">Aligned with / Compliant with</p>
             <div className="flex flex-wrap items-center justify-center gap-3">
               {trustBadges.map((badge) => (
                 <span
                   key={badge}
-                  className="rounded-full border border-ps-slate-200 bg-ps-slate-50 px-5 py-2.5 text-xs font-bold text-ps-slate-700"
+                  className="rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-xs font-bold text-white/85"
                 >
                   {badge}
                 </span>
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal delay={200}>
-          <div className="mt-10 border-t border-ps-slate-200 pt-10">
-            <p className="text-center text-eyebrow mb-8">Trusted Standards & Partners</p>
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-              {partnerLogos.map((partner) => (
-                <PartnerBadge
-                  key={partner.name}
-                  name={partner.name}
-                  subtitle={partner.subtitle}
-                  icon={partner.icon}
-                />
               ))}
             </div>
           </div>

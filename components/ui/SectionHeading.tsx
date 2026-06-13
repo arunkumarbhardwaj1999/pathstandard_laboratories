@@ -11,12 +11,12 @@ export default function SectionHeading({
   title,
   description,
   align = "left",
-  dark = false,
+  dark = true,
 }: SectionHeadingProps) {
   const alignClass = align === "center" ? "text-center mx-auto" : "";
   const titleColor = dark ? "text-white" : "text-ps-slate-900";
-  const descColor = dark ? "text-ps-slate-300" : "text-ps-slate-600";
-  const labelColor = dark ? "text-white/60" : "text-ps-slate-500";
+  const descColor = dark ? "text-white/70" : "text-ps-slate-600";
+  const labelColor = dark ? "!text-ps-teal-light" : "text-ps-slate-500";
 
   return (
     <div className={`max-w-3xl ${alignClass}`}>

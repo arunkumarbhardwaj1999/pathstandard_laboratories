@@ -5,13 +5,13 @@ import { productCategories, productsSectionIntro } from "@/lib/content";
 
 export default function ProductsServices() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-ps-navy">
       <Container wide>
         <ScrollReveal>
           <div className="mb-14 grid gap-8 lg:grid-cols-2 lg:gap-16 lg:items-end">
             <div className="flex gap-5">
               <div className="accent-bar" />
-              <h2 className="text-section-title text-ps-navy">{productsSectionIntro.title}</h2>
+              <h2 className="text-section-title text-white">{productsSectionIntro.title}</h2>
             </div>
             <p className="text-lead lg:pb-1">{productsSectionIntro.description}</p>
           </div>
@@ -22,8 +22,8 @@ export default function ProductsServices() {
             <ScrollReveal key={product.title} delay={i * 100}>
               <article className="illumina-product-card group flex h-full flex-col overflow-hidden rounded-3xl">
                 <div className="flex flex-1 flex-col p-8 md:p-10">
-                  <h3 className="text-xl font-bold text-ps-navy md:text-2xl">{product.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-ps-slate-600 md:text-base">
+                  <h3 className="text-xl font-bold text-white md:text-2xl">{product.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                     {product.description}
                   </p>
                   <a href={product.href} className="text-link-underline mt-6 inline-block w-fit">

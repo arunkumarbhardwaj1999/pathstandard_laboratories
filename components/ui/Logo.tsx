@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface LogoProps {
+  // "light" = white logo for dark backgrounds; "dark" = navy logo for light backgrounds
   variant?: "light" | "dark";
   size?: "sm" | "md" | "lg";
 }
@@ -14,18 +15,17 @@ const heights = {
 
 export default function Logo({ variant = "dark", size = "md" }: LogoProps) {
   const height = heights[size];
+  const src = variant === "light" ? "/images/logo-reversed.png" : "/images/logo.png";
 
   return (
     <Link
       href="/"
-      className={`inline-flex shrink-0 items-center transition-opacity hover:opacity-90 ${
-        variant === "light" ? "rounded-md bg-white p-2" : ""
-      }`}
+      className="inline-flex shrink-0 items-center transition-opacity hover:opacity-90"
       aria-label="PathStandard Technologies — Home"
     >
       <Image
-        src="/images/logo.png"
-        alt="PathStandard Technologies"
+        src={src}
+        alt="CERTUS PathStandard Technologies"
         width={Math.round(height * 2.73)}
         height={height}
         className="object-contain"

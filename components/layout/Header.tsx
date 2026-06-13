@@ -14,7 +14,7 @@ export default function Header() {
   const demoHref = `${pathname}?intent=Demo#contact`;
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm shadow-ps-slate-200/50">
+    <header className="sticky top-0 z-50 bg-ps-navy-deep shadow-lg shadow-black/20">
       <div className="hidden bg-ps-navy lg:block">
         <Container wide className="flex h-9 items-center justify-between">
           <div className="flex items-center gap-5 text-xs text-white/70">
@@ -38,10 +38,10 @@ export default function Header() {
         </Container>
       </div>
 
-      <div className="relative border-b border-ps-slate-100">
+      <div className="relative border-b border-white/10">
         <Container wide>
           <div className="flex h-[5rem] items-center gap-4 lg:gap-8">
-            <Logo size="md" />
+            <Logo size="md" variant="light" />
 
             <div className="ml-auto flex items-center gap-3">
             <nav className="hidden items-center justify-center gap-1 xl:flex">
@@ -49,7 +49,7 @@ export default function Header() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-2 text-[15px] font-medium text-ps-slate-700 transition-colors hover:text-ps-navy"
+                  className="px-4 py-2 text-[15px] font-medium text-white/75 transition-colors hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -57,7 +57,7 @@ export default function Header() {
             </nav>
 
             <div className="hidden items-center gap-3 lg:flex">
-              <Button href={sampleBoxHref} variant="outline" className="!py-2.5 !px-5 !text-[13px]">
+              <Button href={sampleBoxHref} variant="ghost" className="!py-2.5 !px-5 !text-[13px]">
                 Sample Box
               </Button>
               <Button href={demoHref} variant="primary" className="!py-2.5 !px-6 !text-[13px]">
@@ -67,7 +67,7 @@ export default function Header() {
 
             <button
               type="button"
-              className="inline-flex p-2 text-ps-slate-700 lg:hidden"
+              className="inline-flex p-2 text-white lg:hidden"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
@@ -86,8 +86,8 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="animate-fade-up border-t border-ps-slate-200 bg-white px-6 py-5 lg:hidden">
-          <div className="mb-4 flex flex-col gap-2 border-b border-ps-slate-100 pb-4 text-sm text-ps-slate-600">
+        <div className="animate-fade-up border-t border-white/10 bg-ps-navy-deep px-6 py-5 lg:hidden">
+          <div className="mb-4 flex flex-col gap-2 border-b border-white/10 pb-4 text-sm text-white/70">
             <a href="/use-cases" onClick={() => setMenuOpen(false)}>For Healthcare Providers</a>
             <a href="/roadmap" onClick={() => setMenuOpen(false)}>For Partners</a>
           </div>
@@ -96,7 +96,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="py-3 text-[15px] font-medium text-ps-slate-800 border-b border-ps-slate-100"
+                className="py-3 text-[15px] font-medium text-white border-b border-white/10"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}

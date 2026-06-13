@@ -89,7 +89,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${plusJakarta.variable} h-full antialiased`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col font-sans text-ps-slate-900 bg-white" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col font-sans text-white bg-ps-navy-deep" suppressHydrationWarning>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <Header />
