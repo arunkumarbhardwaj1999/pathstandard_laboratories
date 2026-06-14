@@ -320,13 +320,13 @@ export const workflowFilmScenes = [
   {
     id: 1,
     title: "The Problem",
-    caption: "Today — 200 slides with no ID and no paperwork.",
+    caption: "Today — 200 anonymous slides. No documentation.",
     duration: 8,
   },
   {
     id: 2,
     title: "The Slide Arrives",
-    caption: "PathStandard™ — a permanent ID etched into the glass.",
+    caption: "PathStandard™ — identity etched permanently in glass.",
     duration: 9,
   },
   {
@@ -344,19 +344,19 @@ export const workflowFilmScenes = [
   {
     id: 5,
     title: "The Certificate",
-    caption: "NABL-ready quality certificate — in 8 seconds.",
+    caption: "NABL-ready Certificate of Analysis — in 8 seconds.",
     duration: 8,
   },
   {
     id: 6,
-    title: "Full Tracking",
-    caption: "Complete history from factory to archive.",
+    title: "Chain of Custody",
+    caption: "Complete chain of custody. Manufacture to archive.",
     duration: 9,
   },
   {
     id: 7,
     title: "The Outcome",
-    caption: "NABL audit papers ready in 30 seconds, not 4 hours.",
+    caption: "NABL audit documentation. 30 seconds, not 4 hours.",
     duration: 10,
   },
 ];
@@ -364,7 +364,7 @@ export const workflowFilmScenes = [
 export const workflowFilmEndCard = {
   brand: "PathStandard Technologies",
   url: "cert.pathstandard.com",
-  tagline: "Serialized pathology slides with NABL-ready tracking and documentation.",
+  tagline: "Serialized pathology slides with NABL-ready traceability documentation.",
 };
 
 export const missionStatement = {

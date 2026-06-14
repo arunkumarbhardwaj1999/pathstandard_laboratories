@@ -105,8 +105,9 @@ export default function WorkflowFilm() {
 
           <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/10">
             <div
-              className="h-full bg-white/70 transition-all duration-500"
+              className="h-full transition-all duration-500"
               style={{
+                backgroundColor: "#E8A820",
                 width: showEndCard
                   ? "100%"
                   : `${((sceneIndex + 1) / TOTAL_SCENES) * 100}%`,
@@ -123,7 +124,7 @@ export default function WorkflowFilm() {
               onClick={() => goToScene(i)}
               className={`rounded-full px-4 py-2 text-xs font-semibold transition-all duration-300 ${
                 !showEndCard && i === sceneIndex
-                  ? "bg-ps-navy text-white"
+                  ? "bg-[#E8A820] text-ps-navy-deep"
                   : "border border-white/15 text-white/50 hover:border-white/30 hover:text-white"
               }`}
             >
