@@ -1,12 +1,17 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
-// Lead capture endpoint for the contact form.
+// Lead capture endpoint — sends two emails via Hostinger SMTP:
+//   1) Admin notification (to LEAD_TO) with the full lead details.
+//   2) Auto-reply to the visitor confirming we received their request.
 //
-// TODO (client decision): plug in an email/CRM provider where marked below.
-//   Option A — Web3Forms: set WEB3FORMS_ACCESS_KEY in .env and uncomment the block.
-//   Option B — Resend:    set RESEND_API_KEY + install `resend`, then send from here.
-// Until a provider is wired, submissions are validated and logged server-side so
-// the form already works end-to-end (no lead silently lost in the browser).
+// Configure these environment variables (Vercel → Settings → Environment Variables):
+//   SMTP_HOST   = smtp.hostinger.com
+//   SMTP_PORT   = 465
+//   SMTP_USER   = hello@pathstandard.in
+//   SMTP_PASS   = <your Hostinger mailbox password>
+//   MAIL_FROM   = PathStandard <hello@pathstandard.in>
+//   LEAD_TO     = iftekhar@pathstandard.in,hello@pathstandard.in   (comma-separated)
 
 interface ContactPayload {
   name?: string;
@@ -32,10 +37,10 @@ export async function POST(request: Request) {
 
   // Honeypot: real users never fill this hidden field. Bots do.
   if (data.company && data.company.trim() !== "") {
-    return NextResponse.json({ ok: true }); // silently accept, ignore bot
+    return NextResponse.json({ ok: true });
   }
 
-  // Server-side validation (never trust the client).
+  // Server-side validation.
   const required: (keyof ContactPayload)[] = ["name", "email", "phone"];
   const missing = required.filter((f) => !data[f] || `${data[f]}`.trim() === "");
   if (missing.length > 0) {
@@ -51,30 +56,72 @@ export async function POST(request: Request) {
     );
   }
 
-  // --- WIRE A PROVIDER HERE -------------------------------------------------
-  // Example (Web3Forms):
-  // const key = process.env.WEB3FORMS_ACCESS_KEY;
-  // if (key) {
-  //   await fetch("https://api.web3forms.com/submit", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({ access_key: key, subject: `New lead: ${data.intent}`, ...data }),
-  //   });
-  // }
-  // -------------------------------------------------------------------------
+  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, MAIL_FROM, LEAD_TO } = process.env;
 
-  // Fallback so leads are never lost during development / pre-provider.
-  console.log("[contact] new lead:", {
-    name: data.name,
-    lab: data.lab,
-    role: data.role,
-    intent: data.intent,
-    city: data.city,
-    phone: data.phone,
-    email: data.email,
-    message: data.message ?? "",
-    at: new Date().toISOString(),
+  // If SMTP isn't configured yet, log the lead so nothing is lost.
+  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+    console.log("[contact] new lead (SMTP not configured):", { ...data, at: new Date().toISOString() });
+    return NextResponse.json({ ok: true });
+  }
+
+  const from = MAIL_FROM || `PathStandard <${SMTP_USER}>`;
+  const adminTo = (LEAD_TO || SMTP_USER).split(",").map((s) => s.trim());
+  const port = Number(SMTP_PORT) || 465;
+
+  const transporter = nodemailer.createTransport({
+    host: SMTP_HOST,
+    port,
+    secure: port === 465, // true for 465, false for 587
+    auth: { user: SMTP_USER, pass: SMTP_PASS },
   });
+
+  const safe = (v?: string) => (v && v.trim() ? v : "—");
+  const adminHtml = `
+    <h2 style="margin:0 0 12px">New website enquiry</h2>
+    <table style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px">
+      <tr><td style="padding:4px 12px 4px 0;color:#64748b">Name</td><td><b>${safe(data.name)}</b></td></tr>
+      <tr><td style="padding:4px 12px 4px 0;color:#64748b">Email</td><td>${safe(data.email)}</td></tr>
+      <tr><td style="padding:4px 12px 4px 0;color:#64748b">Phone</td><td>${safe(data.phone)}</td></tr>
+      <tr><td style="padding:4px 12px 4px 0;color:#64748b">Lab / Hospital</td><td>${safe(data.lab)}</td></tr>
+      <tr><td style="padding:4px 12px 4px 0;color:#64748b">Role</td><td>${safe(data.role)}</td></tr>
+      <tr><td style="padding:4px 12px 4px 0;color:#64748b">City &amp; State</td><td>${safe(data.city)}</td></tr>
+      <tr><td style="padding:4px 12px 4px 0;color:#64748b">Looking for</td><td>${safe(data.intent)}</td></tr>
+      <tr><td style="padding:4px 12px 4px 0;color:#64748b;vertical-align:top">Message</td><td>${safe(data.message)}</td></tr>
+    </table>`;
+
+  const replyHtml = `
+    <div style="font-family:Arial,sans-serif;font-size:15px;color:#0f2340;line-height:1.6">
+      <p>Hi ${safe(data.name)},</p>
+      <p>Thank you for reaching out to <b>PathStandard Technologies</b>. We've received your request and our team will contact you shortly.</p>
+      <p>If it's urgent, you can reply to this email or write to us at contact@pathstandard.in.</p>
+      <p style="margin-top:20px">Warm regards,<br/>The PathStandard Team<br/>
+      <span style="color:#1fa6c9">cert.pathstandard.in</span></p>
+    </div>`;
+
+  try {
+    // 1) Notify the admin/team.
+    await transporter.sendMail({
+      from,
+      to: adminTo,
+      replyTo: data.email,
+      subject: `New PathStandard lead: ${data.intent ?? "Enquiry"} — ${data.name}`,
+      html: adminHtml,
+    });
+    // 2) Auto-reply to the visitor.
+    await transporter.sendMail({
+      from,
+      to: data.email!,
+      replyTo: "contact@pathstandard.in",
+      subject: "We've received your request — PathStandard Technologies",
+      html: replyHtml,
+    });
+  } catch (err) {
+    console.error("[contact] email send failed", err);
+    return NextResponse.json(
+      { error: "Could not send your request right now. Please email contact@pathstandard.in." },
+      { status: 502 }
+    );
+  }
 
   return NextResponse.json({ ok: true });
 }

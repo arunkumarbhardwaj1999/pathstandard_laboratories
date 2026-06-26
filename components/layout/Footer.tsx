@@ -20,8 +20,9 @@ const footerLinks = {
     { label: "Terms & Conditions", href: "/terms" },
   ],
   connect: [
-    { label: "hello@pathstandard.com", href: "mailto:hello@pathstandard.com" },
-    { label: "cert.pathstandard.com", href: "https://cert.pathstandard.com" },
+    { label: "contact@pathstandard.in", href: "mailto:contact@pathstandard.in" },
+    { label: "+1 (224) 804-4106", href: "tel:+12248044106" },
+    { label: "cert.pathstandard.in", href: "https://cert.pathstandard.in" },
     { label: "Get in Touch", href: "#contact" },
   ],
 };

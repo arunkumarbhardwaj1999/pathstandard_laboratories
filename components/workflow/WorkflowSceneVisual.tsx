@@ -107,7 +107,7 @@ export default function WorkflowSceneVisual({ sceneId }: { sceneId: number }) {
                   >
                     ✓
                   </div>
-                  <p className="font-mono text-[8px] text-white/70">cert.pathstandard.com</p>
+                  <p className="font-mono text-[8px] text-white/70">cert.pathstandard.in</p>
                 </div>
               </div>
             </div>

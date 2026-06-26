@@ -18,8 +18,8 @@ export default function Header() {
       <div className="hidden bg-ps-navy lg:block">
         <Container wide className="flex h-9 items-center justify-between">
           <div className="flex items-center gap-5 text-xs text-white/70">
-            <a href="https://cert.pathstandard.com" className="hover:text-white transition-colors">
-              cert.pathstandard.com
+            <a href="https://cert.pathstandard.in" className="hover:text-white transition-colors">
+              cert.pathstandard.in
             </a>
             <span className="text-white/30">|</span>
             <span>INDIA · SINGAPORE · APAC · MEA · WE · USA</span>
@@ -31,7 +31,11 @@ export default function Header() {
             <a href="/roadmap" className="hover:text-white transition-colors">
               For Partners
             </a>
-            <a href="mailto:hello@pathstandard.com" className="hover:text-white transition-colors">
+            <a href="tel:+12248044106" className="hover:text-white transition-colors">
+              +1 (224) 804-4106
+            </a>
+            <span className="text-white/30">|</span>
+            <a href="mailto:contact@pathstandard.in" className="hover:text-white transition-colors">
               Contact
             </a>
           </div>

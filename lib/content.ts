@@ -152,7 +152,7 @@ export const howItWorksSteps = [
     step: 4,
     title: "Lab Receipt & Use",
     description:
-      "Any lab staff member scans a slide with a phone camera — no app needed. The browser opens cert.pathstandard.com/s/{serial_id} with the full quality record. One tap downloads the PDF certificate.",
+      "Any lab staff member scans a slide with a phone camera — no app needed. The browser opens cert.pathstandard.in/s/{serial_id} with the full quality record. One tap downloads the PDF certificate.",
   },
   {
     step: 5,
@@ -245,7 +245,7 @@ export const faqs = [
   },
   {
     q: "Does scanning require a special app?",
-    a: "No. Any phone camera (iOS or Android) can scan the barcode. It opens cert.pathstandard.com/s/{serial_id} in your browser. No app download or account needed.",
+    a: "No. Any phone camera (iOS or Android) can scan the barcode. It opens cert.pathstandard.in/s/{serial_id} in your browser. No app download or account needed.",
   },
   {
     q: "Can existing slides already in use be serialized?",
@@ -363,7 +363,7 @@ export const workflowFilmScenes = [
 
 export const workflowFilmEndCard = {
   brand: "PathStandard Technologies",
-  url: "cert.pathstandard.com",
+  url: "cert.pathstandard.in",
   tagline: "Serialized pathology slides with NABL-ready traceability documentation.",
 };
 
@@ -398,7 +398,7 @@ export const regulatoryDisclosures = {
     paragraphs: [
       "PathStandard manufacturing is aligned with ISO 13485 Quality Management System requirements. Documentation supports ISO 15189:2022 Clause 6.6 consumable traceability needs for NABL-accredited laboratories.",
       "Slide QR codes comply with ISO/IEC 18004 2D barcode standards. Quality records are stored with encryption and maintained as immutable entries from the point of manufacture.",
-      "For regulatory inquiries, contact hello@pathstandard.com. Product specifications are subject to change. Intended for laboratory and healthcare professional use in India and APAC markets.",
+      "For regulatory inquiries, contact hello@pathstandard.in. Product specifications are subject to change. Intended for laboratory and healthcare professional use in India and APAC markets.",
     ],
   },
 };
@@ -480,7 +480,7 @@ export const productCategories = [
     title: "CoA & Quality Portal",
     description: "Scan any slide with a phone and download a PDF quality certificate in under 10 seconds.",
     cta: "View CoA portal",
-    href: "https://cert.pathstandard.com",
+    href: "https://cert.pathstandard.in",
     image: "/images/packaging-hero.png",
     imageAlt: "PathStandard quality certificate portal",
   },

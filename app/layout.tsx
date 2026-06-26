@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Analytics from "@/components/Analytics";
 import JsonLd from "@/components/JsonLd";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://pathstandard.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://pathstandard.in";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -16,7 +16,8 @@ const organizationSchema = {
   logo: `${SITE_URL}/images/logo.png`,
   description:
     "PathStandard manufactures serialized pathology slides with permanent QR code identity and cloud-linked quality records for NABL-ready, ISO 15189:2022 traceability.",
-  email: "hello@pathstandard.com",
+  email: "contact@pathstandard.in",
+  telephone: "+1-224-804-4106",
   address: [
     { "@type": "PostalAddress", addressLocality: "Hyderabad", addressCountry: "IN" },
     { "@type": "PostalAddress", addressLocality: "Singapore", addressCountry: "SG" },
@@ -39,7 +40,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://pathstandard.com"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://pathstandard.in"
   ),
   title: "PathStandard Technologies — Serialized Pathology Reference Slides",
   description:

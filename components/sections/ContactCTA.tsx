@@ -47,7 +47,7 @@ export default function ContactCTA() {
       setError(
         err instanceof Error
           ? err.message
-          : "Could not send your request. Please email hello@pathstandard.com."
+          : "Could not send your request. Please email contact@pathstandard.in."
       );
     } finally {
       setLoading(false);
@@ -87,7 +87,16 @@ export default function ContactCTA() {
               </Button>
             </div>
 
-            <p className="mt-8 text-sm text-ps-slate-400">
+            <p className="mt-8 text-sm text-white/80">
+              <a href="tel:+12248044106" className="font-semibold text-white hover:text-ps-teal-light">
+                +1 (224) 804-4106
+              </a>
+              {"  ·  "}
+              <a href="mailto:contact@pathstandard.in" className="font-semibold text-white hover:text-ps-teal-light">
+                contact@pathstandard.in
+              </a>
+            </p>
+            <p className="mt-3 text-sm text-ps-slate-400">
               Made in India · ISO 13485 aligned · Singapore HQ · CDSCO Class A IVD — registration in progress
             </p>
           </div>
@@ -103,8 +112,8 @@ export default function ContactCTA() {
                 <h3 className="mt-4 text-xl font-semibold">Thank you!</h3>
                 <p className="mt-2 text-sm text-ps-slate-400">
                   We&apos;ll be in touch shortly. For immediate inquiries, email{" "}
-                  <a href="mailto:hello@pathstandard.com" className="text-white underline hover:text-ps-slate-200">
-                    hello@pathstandard.com
+                  <a href="mailto:contact@pathstandard.in" className="text-white underline hover:text-ps-slate-200">
+                    contact@pathstandard.in
                   </a>
                 </p>
               </div>

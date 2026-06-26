@@ -54,8 +54,8 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-semibold text-white">5. Contact</h2>
             <p className="mt-2">
               For any privacy request or question, contact us at{" "}
-              <a href="mailto:hello@pathstandard.com" className="text-ps-teal-light underline underline-offset-4">
-                hello@pathstandard.com
+              <a href="mailto:contact@pathstandard.in" className="text-ps-teal-light underline underline-offset-4">
+                contact@pathstandard.in
               </a>
               .
             </p>

@@ -28,7 +28,7 @@ export default function PathStandardCloud() {
               <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-              <span className="ml-3 text-xs font-medium text-white/40">cert.pathstandard.com / dashboard</span>
+              <span className="ml-3 text-xs font-medium text-white/40">cert.pathstandard.in / dashboard</span>
             </div>
             <div className="grid gap-px bg-white/5 p-px sm:grid-cols-2 lg:grid-cols-3">
               {cloudFeatures.map((f) => (
