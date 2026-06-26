@@ -73,6 +73,9 @@ export async function POST(request: Request) {
     port,
     secure: port === 465, // true for 465, false for 587
     auth: { user: SMTP_USER, pass: SMTP_PASS },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 20000,
   });
 
   const safe = (v?: string) => (v && v.trim() ? v : "—");
@@ -98,8 +101,8 @@ export async function POST(request: Request) {
       <span style="color:#1fa6c9">cert.pathstandard.in</span></p>
     </div>`;
 
+  // 1) Notify the admin/team — this is the critical send.
   try {
-    // 1) Notify the admin/team.
     await transporter.sendMail({
       from,
       to: adminTo,
@@ -107,7 +110,16 @@ export async function POST(request: Request) {
       subject: `New PathStandard lead: ${data.intent ?? "Enquiry"} — ${data.name}`,
       html: adminHtml,
     });
-    // 2) Auto-reply to the visitor.
+  } catch (err) {
+    console.error("[contact] admin email failed:", err instanceof Error ? err.message : err);
+    return NextResponse.json(
+      { error: "Could not send your request right now. Please email contact@pathstandard.in." },
+      { status: 502 }
+    );
+  }
+
+  // 2) Auto-reply to the visitor — best-effort, never block lead capture.
+  try {
     await transporter.sendMail({
       from,
       to: data.email!,
@@ -116,11 +128,7 @@ export async function POST(request: Request) {
       html: replyHtml,
     });
   } catch (err) {
-    console.error("[contact] email send failed", err);
-    return NextResponse.json(
-      { error: "Could not send your request right now. Please email contact@pathstandard.in." },
-      { status: 502 }
-    );
+    console.error("[contact] auto-reply failed (non-fatal):", err instanceof Error ? err.message : err);
   }
 
   return NextResponse.json({ ok: true });
