@@ -101,6 +101,24 @@ export async function POST(request: Request) {
       <span style="color:#1fa6c9">cert.pathstandard.in</span></p>
     </div>`;
 
+  // Plain-text alternatives — emails with both HTML + text are far less likely
+  // to be flagged as spam.
+  const adminText =
+    `New website enquiry\n\n` +
+    `Name: ${safe(data.name)}\n` +
+    `Email: ${safe(data.email)}\n` +
+    `Phone: ${safe(data.phone)}\n` +
+    `Lab / Hospital: ${safe(data.lab)}\n` +
+    `Role: ${safe(data.role)}\n` +
+    `City & State: ${safe(data.city)}\n` +
+    `Looking for: ${safe(data.intent)}\n` +
+    `Message: ${safe(data.message)}\n`;
+  const replyText =
+    `Hi ${safe(data.name)},\n\n` +
+    `Thank you for reaching out to PathStandard Technologies. We've received your request and our team will contact you shortly.\n\n` +
+    `If it's urgent, reply to this email or write to contact@pathstandard.in.\n\n` +
+    `Warm regards,\nThe PathStandard Team\ncert.pathstandard.in`;
+
   // 1) Notify the admin/team — this is the critical send.
   try {
     await transporter.sendMail({
@@ -108,6 +126,7 @@ export async function POST(request: Request) {
       to: adminTo,
       replyTo: data.email,
       subject: `New PathStandard lead: ${data.intent ?? "Enquiry"} — ${data.name}`,
+      text: adminText,
       html: adminHtml,
     });
   } catch (err) {
@@ -125,6 +144,7 @@ export async function POST(request: Request) {
       to: data.email!,
       replyTo: "contact@pathstandard.in",
       subject: "We've received your request — PathStandard Technologies",
+      text: replyText,
       html: replyHtml,
     });
   } catch (err) {
