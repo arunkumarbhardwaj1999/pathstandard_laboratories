@@ -1,0 +1,23 @@
+# PathStandard Technologies
+
+> PathStandard manufactures serialized pathology microscope slides with a permanent, laser-etched QR code identity and cloud-linked quality records — giving laboratories NABL-ready, ISO 15189:2022 traceability with no new hardware in the lab.
+
+PathStandard is "the slide with an identity." Every diagnostic glass slide carries a permanent QR code, a human-readable serial number, and fiducial markers, linked to a manufacturer Certificate of Analysis (CoA) that any phone can retrieve in under 10 seconds. This closes the consumable-traceability gap that NABL assessors check under ISO 15189:2022 Clause 6.6.
+
+## Key facts
+- Product: serialized pathology slides. Five SKUs — APS (APTES charged), PLS (plain serialized), FRS (frosted end), CYT (cytology PAP), FSH (adhesive FISH).
+- Identity zone: permanent laser-etched QR code (ISO/IEC 18004) + human-readable serial + fiducial markers, designed to withstand standard staining and clearing protocols (validation in progress).
+- Documentation: per-lot Certificate of Analysis, downloadable in ~10 seconds via a phone scan — no app, no login.
+- Compliance: ISO 15189:2022 Clause 6.6, NABL 112A, ISO 13485 QMS, CDSCO Class A IVD (registration in progress).
+- Platform: PathStandard Cloud — CoA retrieval, lot records, audit reports, batch alerts, chain of custody, LIS integrations (roadmap).
+- Digital pathology: QR code readable from whole-slide images (WSI) for substrate provenance.
+- Markets served: India, Singapore, APAC, Middle East & Africa, Western Europe, USA.
+- Contact: contact@pathstandard.in · +1 (224) 804-4106 · cert.pathstandard.in
+
+## Pages
+- [Products & Slide Portfolio](https://pathstandard.in/products): the five serialized slide SKUs and their uses.
+- [How It Works](https://pathstandard.in/how-it-works): the five-step chain of custody from manufacture to archive.
+- [Compliance](https://pathstandard.in/compliance): how PathStandard maps to ISO 15189:2022, NABL 112A, ISO 13485, CDSCO.
+- [Use Cases](https://pathstandard.in/use-cases): lab scenarios (NABL audit prep, tissue detachment, AI-ready WSI archives) and ROI.
+- [Roadmap](https://pathstandard.in/roadmap): the platform roadmap.
+- [FAQ](https://pathstandard.in/faq): common questions about QR codes, scanning, retention, and device classification.

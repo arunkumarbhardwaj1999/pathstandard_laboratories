@@ -12,17 +12,38 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "PathStandard Technologies",
+  legalName: "PathStandard Technologies Pvt. Ltd. & Pte. Ltd.",
   url: SITE_URL,
   logo: `${SITE_URL}/images/logo.png`,
+  image: `${SITE_URL}/images/og-image.png`,
+  slogan: "Identified. Traceable. Trusted.",
   description:
     "PathStandard manufactures serialized pathology slides with permanent QR code identity and cloud-linked quality records for NABL-ready, ISO 15189:2022 traceability.",
   email: "contact@pathstandard.in",
   telephone: "+1-224-804-4106",
+  knowsAbout: [
+    "Pathology slides",
+    "Slide serialization",
+    "NABL accreditation",
+    "ISO 15189:2022",
+    "Certificate of Analysis",
+    "Digital pathology",
+    "Whole slide imaging",
+    "Consumable traceability",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+1-224-804-4106",
+    email: "contact@pathstandard.in",
+    contactType: "sales",
+    areaServed: ["IN", "SG", "AE", "US", "GB"],
+    availableLanguage: ["en"],
+  },
   address: [
     { "@type": "PostalAddress", addressLocality: "Hyderabad", addressCountry: "IN" },
     { "@type": "PostalAddress", addressLocality: "Singapore", addressCountry: "SG" },
   ],
-  areaServed: ["IN", "APAC"],
+  areaServed: ["IN", "SG", "AE", "US", "GB", "APAC"],
 };
 
 const websiteSchema = {
@@ -60,13 +81,12 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "PathStandard Technologies",
     locale: "en_IN",
-    // TODO: replace with a dedicated 1200x630 social card at /public/images/og-image.png
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "PathStandard Technologies",
+        alt: "PathStandard Technologies — serialized pathology slides with NABL-ready traceability",
       },
     ],
   },
@@ -75,7 +95,21 @@ export const metadata: Metadata = {
     title: "PathStandard Technologies — Serialized Pathology Reference Slides",
     description:
       "Serialized pathology slides with NABL-ready traceability documentation.",
-    images: ["/images/logo.png"],
+    images: ["/images/og-image.png"],
+  },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   icons: {
     icon: "/images/logo.png",
