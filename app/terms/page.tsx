@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-ps-navy-deep text-white">
       <Container className="max-w-3xl">
-        <p className="text-eyebrow">Legal</p>
-        <h1 className="text-section-title mt-3">Terms &amp; Conditions</h1>
-        <p className="mt-4 text-sm text-ps-slate-500">Last updated: June 2026</p>
+        <p className="text-eyebrow !text-ps-teal-light">Legal</p>
+        <h1 className="text-section-title mt-3 text-white">Terms &amp; Conditions</h1>
+        <p className="mt-4 text-sm text-white/50">Last updated: June 2026</p>
 
         {/* PLACEHOLDER — client to review with legal counsel before launch. */}
         <div className="mt-10 space-y-8 text-white/70 leading-relaxed">

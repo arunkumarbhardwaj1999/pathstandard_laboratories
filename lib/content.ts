@@ -572,8 +572,8 @@ export const exploreTabs = [
     label: "Histology",
     title: "Perform efficient histology with traceable slides.",
     description:
-      "Serialized H&E and IHC slides with permanent barcodes that survive all staining and clearing steps.",
-    href: "/products",
+      "Serialized H&E and IHC slides with permanent QR codes, designed to withstand standard staining and clearing steps.",
+    href: "/use-cases",
     image: "/images/brand-spec.png",
   },
   {
@@ -582,7 +582,7 @@ export const exploreTabs = [
     title: "Track every cytology slide from factory to report.",
     description:
       "PAP and cytology SKUs with lot-level quality records and instant CoA access for audit teams.",
-    href: "/products",
+    href: "/use-cases",
     image: "/images/packaging-hero.png",
   },
   {
@@ -590,8 +590,8 @@ export const exploreTabs = [
     label: "Digital Pathology",
     title: "Link whole slide images to substrate quality data.",
     description:
-      "Barcodes readable from WSI files — attach manufacturer QC records to every digital scan automatically.",
-    href: "/products",
+      "QR codes readable from WSI files — attach manufacturer QC records to every digital scan automatically.",
+    href: "/use-cases",
     image: "/images/brand-spec.png",
   },
   {

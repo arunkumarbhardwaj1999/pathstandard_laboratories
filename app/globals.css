@@ -306,4 +306,18 @@ body {
 
 .form-input-dark {
   @apply w-full rounded-lg border border-ps-slate-600 bg-ps-navy px-3 py-2.5 text-sm text-white placeholder:text-ps-slate-500 focus:border-white/40 focus:outline-none;
+  color: #fff;
+  caret-color: #fff;
+}
+/* Keep typed + browser-autofilled text visible on the dark inputs */
+.form-input-dark:-webkit-autofill,
+.form-input-dark:-webkit-autofill:hover,
+.form-input-dark:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff;
+  caret-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px #0f2340 inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+.form-input-dark option {
+  color: #0f2340;
 }

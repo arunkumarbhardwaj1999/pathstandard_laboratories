@@ -21,14 +21,14 @@ export default function UseCases() {
               <h3 className="mt-2 text-xl font-semibold text-white">{useCase.title}</h3>
 
               <div className="mt-6 grid gap-4 md:grid-cols-2">
-                <div className="rounded-lg bg-ps-error-bg p-4">
-                  <p className="text-xs font-bold tracking-widest text-ps-error uppercase">
+                <div className="rounded-lg border border-ps-error/25 bg-ps-error/10 p-4">
+                  <p className="text-xs font-bold tracking-widest text-red-300 uppercase">
                     Before PathStandard
                   </p>
                   <p className="mt-2 text-sm text-white/80">{useCase.before}</p>
                 </div>
-                <div className="rounded-lg bg-ps-success-bg p-4">
-                  <p className="text-xs font-bold tracking-widest text-ps-success uppercase">
+                <div className="rounded-lg border border-ps-teal/25 bg-ps-teal/10 p-4">
+                  <p className="text-xs font-bold tracking-widest text-ps-teal-light uppercase">
                     After PathStandard
                   </p>
                   <p className="mt-2 text-sm text-white/80">{useCase.after}</p>
