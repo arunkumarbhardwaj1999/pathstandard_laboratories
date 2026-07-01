@@ -57,10 +57,6 @@ export default function TermsPage() {
             </p>
           </div>
 
-          <p className="rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-800">
-            Note: This is a template. Please have it reviewed by legal counsel and updated
-            with your registered entity details before going live.
-          </p>
         </div>
       </Container>
     </section>
