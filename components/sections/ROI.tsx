@@ -7,6 +7,7 @@ export default function ROI() {
     <section id="roi" className="section-padding bg-ps-navy-deep">
       <Container>
         <SectionHeading
+          align="center"
           label="ROI & Value Proof"
           title="Tracking should save money, not add work."
           description="Labs don't buy compliance tools just for paperwork — they buy them to cut rework, save time, and lower risk. PathStandard directly reduces three measurable costs."

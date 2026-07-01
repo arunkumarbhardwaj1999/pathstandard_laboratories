@@ -15,6 +15,7 @@ export default function BetterPathology() {
     <section className="section-padding bg-ps-navy-deep">
       <Container>
         <SectionHeading
+          align="center"
           label="Better Pathology"
           title="Designed for the pathology workflow."
           description="PathStandard isn't just traceability — it is a better slide for the people who depend on it every day."

@@ -13,7 +13,8 @@ export default function SectionHeading({
   align = "left",
   dark = true,
 }: SectionHeadingProps) {
-  const alignClass = align === "center" ? "text-center mx-auto" : "";
+  const isCenter = align === "center";
+  const alignClass = isCenter ? "text-center mx-auto" : "";
   const titleColor = dark ? "text-white" : "text-ps-slate-900";
   const descColor = dark ? "text-white/70" : "text-ps-slate-600";
   const labelColor = dark ? "!text-ps-teal-light" : "text-ps-slate-500";
@@ -25,7 +26,9 @@ export default function SectionHeading({
       )}
       <h2 className={`text-section-title ${titleColor}`}>{title}</h2>
       {description && (
-        <p className={`mt-4 text-lg leading-relaxed ${descColor}`}>{description}</p>
+        <p className={`mt-4 text-lg leading-relaxed ${descColor} ${isCenter ? "mx-auto max-w-2xl" : ""}`}>
+          {description}
+        </p>
       )}
     </div>
   );

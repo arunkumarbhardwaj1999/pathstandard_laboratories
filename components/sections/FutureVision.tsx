@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { Fragment } from "react";
 
 const chain = ["Specimen Container", "Cassette", "Slide", "Scanner", "Digital Archive"];
 
@@ -18,29 +19,34 @@ export default function FutureVision() {
         </div>
 
         <ScrollReveal delay={120}>
-          <div className="mt-14 flex flex-col items-stretch gap-3 md:flex-row md:items-center md:justify-center md:gap-2">
+          <div className="mt-14 flex flex-col items-center gap-3 md:flex-row md:flex-wrap md:items-center md:justify-center md:gap-2">
             {chain.map((node, i) => {
               const active = node === "Slide";
               return (
-                <div key={node} className="flex items-center gap-3 md:flex-col md:gap-3">
+                <Fragment key={node}>
                   <div
-                    className={`flex-1 rounded-xl border px-5 py-4 text-center text-sm font-semibold md:min-w-[140px] ${
+                    className={`flex w-full max-w-xs flex-col items-center justify-center rounded-xl border px-5 py-4 text-center text-sm font-semibold md:w-auto md:min-w-[140px] ${
                       active
                         ? "border-ps-teal/40 bg-ps-teal/15 text-white"
                         : "border-white/10 bg-white/[0.03] text-white/55"
                     }`}
                   >
                     {node}
-                    {active && (
-                      <span className="mt-1 block text-[10px] font-bold uppercase tracking-widest text-ps-teal-light">
-                        Identified
-                      </span>
-                    )}
+                    <span
+                      className={`mt-1 block text-[10px] font-bold uppercase tracking-widest ${
+                        active ? "text-ps-teal-light" : "invisible"
+                      }`}
+                      aria-hidden={!active}
+                    >
+                      Identified
+                    </span>
                   </div>
                   {i < chain.length - 1 && (
-                    <span className="text-ps-teal-light/60 md:rotate-0">→</span>
+                    <span className="shrink-0 text-ps-teal-light/60 md:rotate-0" aria-hidden>
+                      →
+                    </span>
                   )}
-                </div>
+                </Fragment>
               );
             })}
           </div>

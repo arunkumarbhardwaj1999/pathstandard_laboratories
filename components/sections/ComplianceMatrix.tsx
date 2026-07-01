@@ -8,6 +8,7 @@ export default function ComplianceMatrix() {
     <section id="standards" className="section-padding bg-ps-navy-deep">
       <Container>
         <SectionHeading
+          align="center"
           label="Standards & Clauses"
           title="Built for NABL audits. Designed around ISO 15189:2022."
           description="Each PathStandard capability maps directly to a specific standard or clause your assessors check — so compliance documentation is satisfied by design, not by manual preparation."

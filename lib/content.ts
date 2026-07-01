@@ -38,14 +38,105 @@ export const userSegments = [
 ];
 
 export const ecosystemNodes = [
-  { id: "serialize", label: "Laser Serialization", icon: "barcode" },
-  { id: "qc", label: "QC Records", icon: "document" },
-  { id: "coa", label: "CoA Portal", icon: "scan" },
-  { id: "audit", label: "Audit Docs", icon: "shield" },
-  { id: "lims", label: "LIMS Ready", icon: "chain" },
-  { id: "digital", label: "Digital Pathology", icon: "scan" },
-  { id: "tracking", label: "Chain of Custody", icon: "chain" },
-  { id: "nabl", label: "NABL Aligned", icon: "shield" },
+  {
+    id: "serialize",
+    label: "Laser Serialization",
+    icon: "barcode",
+    description: "Every slide carries a permanent laser-etched barcode and serial number — readable by any phone camera.",
+  },
+  {
+    id: "qc",
+    label: "QC Records",
+    icon: "document",
+    description: "Lot-level glass batch, coating, and surface quality data written to the cloud at manufacture.",
+  },
+  {
+    id: "coa",
+    label: "CoA Portal",
+    icon: "scan",
+    description: "Scan any slide and download a full Certificate of Analysis in under 10 seconds — no app required.",
+  },
+  {
+    id: "audit",
+    label: "Audit Docs",
+    icon: "shield",
+    description: "ISO 15189:2022-aligned documentation your assessors can verify on the spot.",
+  },
+  {
+    id: "lims",
+    label: "LIMS Ready",
+    icon: "chain",
+    description: "Slide identity designed to connect with laboratory information systems on your roadmap.",
+  },
+  {
+    id: "digital",
+    label: "Digital Pathology",
+    icon: "scan",
+    description: "Attach certified substrate provenance to every whole-slide image in your archive.",
+  },
+  {
+    id: "tracking",
+    label: "Chain of Custody",
+    icon: "chain",
+    description: "Full traceability from factory to lab receipt, use, and permanent archive.",
+  },
+  {
+    id: "nabl",
+    label: "NABL Aligned",
+    icon: "shield",
+    description: "Consumable traceability built around NABL 112A and ISO 15189:2022 Clause 6.6 needs.",
+  },
+];
+
+export const ecosystemWithoutNodes = [
+  {
+    id: "no-id",
+    label: "No Slide Identity",
+    icon: "barcode",
+    description: "Anonymous glass with no serial number — impossible to trace back to manufacturer or lot.",
+  },
+  {
+    id: "no-qc",
+    label: "No QC Data",
+    icon: "document",
+    description: "No manufacturer quality record on file when your assessor asks for consumable documentation.",
+  },
+  {
+    id: "no-coa",
+    label: "Missing CoA",
+    icon: "scan",
+    description: "Paper certificates lost, incomplete, or never provided — hours spent calling suppliers.",
+  },
+  {
+    id: "audit-gap",
+    label: "Audit Gaps",
+    icon: "shield",
+    description: "Quality teams scramble to assemble paperwork that was never designed to be tracked.",
+  },
+  {
+    id: "no-lims",
+    label: "No Integration",
+    icon: "chain",
+    description: "Slide data lives outside your lab systems — manual entry and duplicate records.",
+  },
+  {
+    id: "anon-wsi",
+    label: "Anonymous WSI",
+    icon: "scan",
+    description: "Digital pathology images with no link to substrate quality or production lot.",
+  },
+  {
+    id: "broken-chain",
+    label: "Broken Traceability",
+    icon: "chain",
+    description: "No chain of custody from supplier to archive — gaps appear the moment audit day arrives.",
+  },
+  {
+    id: "nabl-risk",
+    label: "Compliance Risk",
+    icon: "shield",
+    description: "ISO 15189 Clause 6.6 gaps that assessors flag as non-conformities during accreditation.",
+  },
 ];
 
 export const realResults = [

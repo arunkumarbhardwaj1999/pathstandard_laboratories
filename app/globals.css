@@ -140,12 +140,20 @@ body {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 65%);
 }
 
-.ecosystem-ring {
-  animation: ecosystem-spin 60s linear infinite;
+.ecosystem-orbit {
+  animation: ecosystem-spin 48s linear infinite;
+}
+
+.ecosystem-orbit--paused {
+  animation-play-state: paused;
 }
 
 .ecosystem-ring-glow {
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(31, 166, 201, 0.12) 0%, transparent 70%);
+}
+
+.ecosystem-ring-glow--muted {
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.1) 0%, transparent 70%);
 }
 
 @keyframes ecosystem-spin {
@@ -318,6 +326,10 @@ body {
   -webkit-box-shadow: 0 0 0px 1000px #0f2340 inset;
   transition: background-color 9999s ease-in-out 0s;
 }
+select.form-input-dark {
+  color-scheme: dark;
+}
 .form-input-dark option {
-  color: #0f2340;
+  background-color: #1b3a5e;
+  color: #ffffff;
 }

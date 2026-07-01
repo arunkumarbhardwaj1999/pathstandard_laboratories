@@ -22,6 +22,7 @@ export default function Comparison() {
     <section className="section-padding bg-ps-navy-deep text-white">
       <Container>
         <SectionHeading
+          align="center"
           dark
           label="The Difference"
           title="Standard slide vs PathStandard"
