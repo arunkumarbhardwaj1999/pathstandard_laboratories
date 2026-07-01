@@ -25,8 +25,8 @@
   --ps-success-bg: #f0fdf4;
   --ps-error: #dc2626;
   --ps-error-bg: #fef2f2;
-  --background: var(--ps-white);
-  --foreground: var(--ps-slate-900);
+  --background: var(--ps-navy-deep);
+  --foreground: #ffffff;
 }
 
 @theme inline {
