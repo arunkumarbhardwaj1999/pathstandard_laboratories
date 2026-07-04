@@ -18,9 +18,7 @@ export default function Header() {
       <div className="hidden bg-ps-navy lg:block">
         <Container wide className="flex h-9 items-center justify-between">
           <div className="flex items-center gap-5 text-xs text-white/70">
-            <a href="https://cert.pathstandard.in" className="hover:text-white transition-colors">
-              cert.pathstandard.in
-            </a>
+            <span className="text-white/60">cert.pathstandard.in</span>
             <span className="text-white/30">|</span>
             <span>INDIA · SINGAPORE · APAC · MEA · WE · USA</span>
           </div>

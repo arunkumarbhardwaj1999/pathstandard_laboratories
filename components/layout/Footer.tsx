@@ -22,7 +22,6 @@ const footerLinks = {
   connect: [
     { label: "contact@pathstandard.in", href: "mailto:contact@pathstandard.in" },
     { label: "+1 (224) 804-4106", href: "tel:+12248044106" },
-    { label: "cert.pathstandard.in", href: "https://cert.pathstandard.in" },
     { label: "Get in Touch", href: "#contact" },
   ],
 };

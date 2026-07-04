@@ -570,8 +570,8 @@ export const productCategories = [
   {
     title: "CoA & Quality Portal",
     description: "Scan any slide with a phone and download a PDF quality certificate in under 10 seconds.",
-    cta: "View CoA portal",
-    href: "https://cert.pathstandard.in",
+    cta: "Request early access",
+    href: "#contact",
     image: "/images/packaging-hero.png",
     imageAlt: "PathStandard quality certificate portal",
   },
