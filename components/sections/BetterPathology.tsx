@@ -4,10 +4,10 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const tiles = [
-  { title: "Consistent tissue adhesion", image: "/images/tile-adhesion.png" },
-  { title: "Reduced tissue loss", image: "/images/tile-tissueloss.png" },
-  { title: "Digital pathology ready", image: "/images/tile-digital.png" },
-  { title: "Permanent traceability", image: "/images/tile-traceability.png" },
+  { title: "Consistent tissue adhesion", sub: "APTES surface, contact angle <8.5°", image: "/images/tile-adhesion.png" },
+  { title: "Reduced tissue loss", sub: "High surface energy >60 mJ/m²", image: "/images/tile-tissueloss.png" },
+  { title: "Digital pathology ready", sub: "Low-iron glass, low autofluorescence", image: "/images/tile-digital.png" },
+  { title: "Whole-slide scan optimized", sub: "±0.5 mm flatness, ground edges", image: "/images/tile-traceability.png" },
 ];
 
 export default function BetterPathology() {
@@ -34,7 +34,10 @@ export default function BetterPathology() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ps-navy-deep/70 to-transparent" />
                 </div>
-                <p className="p-5 text-sm font-semibold text-white">{t.title}</p>
+                <div className="p-5">
+                  <p className="text-sm font-semibold text-white">{t.title}</p>
+                  <p className="mt-1 font-mono text-[11px] text-ps-teal-light/80">{t.sub}</p>
+                </div>
               </div>
             </ScrollReveal>
           ))}

@@ -1,6 +1,6 @@
 import Container from "@/components/ui/Container";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { trustBadges, trustPillars } from "@/lib/content";
+import { certifications, trustPillars } from "@/lib/content";
 
 export default function TrustBar() {
   return (
@@ -41,17 +41,33 @@ export default function TrustBar() {
 
         <ScrollReveal delay={150}>
           <div className="mt-16 rounded-2xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
-            <p className="mb-6 text-center text-eyebrow !text-white/50">Aligned with / Compliant with</p>
+            <p className="mb-6 text-center text-eyebrow !text-white/50">Quality &amp; regulatory</p>
             <div className="flex flex-wrap items-center justify-center gap-3">
-              {trustBadges.map((badge) => (
-                <span
-                  key={badge}
-                  className="rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-xs font-bold text-white/85"
+              {certifications.map((c) => (
+                <div
+                  key={c.name}
+                  className="flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2.5"
                 >
-                  {badge}
-                </span>
+                  <span
+                    className={`h-2 w-2 shrink-0 rounded-full ${
+                      c.status === "aligned"
+                        ? "bg-green-500"
+                        : c.status === "progress"
+                        ? "bg-amber-400"
+                        : "bg-white/40"
+                    }`}
+                    aria-hidden
+                  />
+                  <div className="text-left">
+                    <div className="text-xs font-bold text-white">{c.name}</div>
+                    <div className="text-[10px] text-white/50">{c.note}</div>
+                  </div>
+                </div>
               ))}
             </div>
+            <p className="mt-5 text-center text-[10px] text-white/35">
+              Green = aligned · Amber = in progress · Grey = planned
+            </p>
           </div>
         </ScrollReveal>
       </Container>

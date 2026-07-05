@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import PremiumQuality from "@/components/sections/PremiumQuality";
 import TrustBar from "@/components/sections/TrustBar";
 import UserSegmentation from "@/components/sections/UserSegmentation";
 import ProblemSolution from "@/components/sections/ProblemSolution";
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <PremiumQuality />
       <TrustBar />
       <UserSegmentation />
       <ProblemSolution />

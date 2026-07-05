@@ -168,32 +168,41 @@ export const realResults = [
 
 export const trustPillars = [
   {
+    title: "Premium Glass",
+    subtitle: "Precision-Manufactured Surface",
+    description: "Low-iron optical glass with a certified aminosilane coating for superior adhesion.",
+  },
+  {
+    title: "Certified",
+    subtitle: "Per-Lot Certificate of Analysis",
+    description: "Contact angle, surface energy and QC result documented for every production lot.",
+  },
+  {
     title: "Serialized",
-    subtitle: "Unique Slide Identity",
-    description: "A permanent laser-etched barcode on every slide.",
-  },
-  {
-    title: "Traceable",
-    subtitle: "Full Tracking History",
-    description: "Digital records from factory to archive.",
-  },
-  {
-    title: "CoA Verified",
-    subtitle: "Certificate of Analysis",
-    description: "Download a PDF quality certificate in under 10 seconds with a phone scan.",
+    subtitle: "Permanent Slide Identity",
+    description: "A permanent laser-etched QR code and serial on every slide — quality you can trace.",
   },
   {
     title: "NABL Ready",
-    subtitle: "Supports Accreditation",
-    description: "Documentation aligned with ISO 15189:2022 audit needs.",
+    subtitle: "Audit-Ready Documentation",
+    description: "Documentation aligned with ISO 15189:2022 — download in seconds with a phone scan.",
   },
 ];
 
+export const certifications = [
+  { name: "ISO 13485:2016", note: "Medical device QMS", status: "aligned" },
+  { name: "ISO 15189:2022", note: "Lab quality — aligned", status: "aligned" },
+  { name: "CDSCO Class A IVD", note: "Registration in progress", status: "progress" },
+  { name: "CE Marking (IVDR)", note: "Pathway in progress", status: "progress" },
+  { name: "US FDA", note: "510(k) pathway planned", status: "planned" },
+  { name: "ISO/IEC 18004", note: "QR Code standard", status: "aligned" },
+];
+
 export const heroStats = [
-  { value: "5", label: "Slide SKUs" },
-  { value: "10 sec", label: "CoA Download" },
-  { value: "ISO 15189", label: "2022 Aligned" },
-  { value: "∞", label: "Permanent ID" },
+  { value: "<8.5°", label: "Certified contact angle" },
+  { value: "0.05%", label: "Low-iron glass (Fe₂O₃)" },
+  { value: "ISO 13485", label: "Manufacturing QMS" },
+  { value: "10 sec", label: "CoA on any phone" },
 ];
 
 export const trustBadges = [
@@ -254,6 +263,10 @@ export const howItWorksSteps = [
 ];
 
 export const comparisonFeatures = [
+  { feature: "Certified surface contact angle", pathstandard: "<8.5°, per lot", leica: "not stated", epredia: "not stated", traditional: "not stated" },
+  { feature: "Low-iron optical glass", pathstandard: "Fe₂O₃ 0.05–0.14%", leica: "varies", epredia: "varies", traditional: "varies" },
+  { feature: "Per-lot Certificate of Analysis", pathstandard: true, leica: false, epredia: false, traditional: false },
+  { feature: "ISO 13485 manufacturing QMS", pathstandard: "aligned", leica: "varies", epredia: "varies", traditional: "varies" },
   { feature: "Permanent slide ID on every slide", pathstandard: true, leica: "limited", epredia: "limited", traditional: false },
   { feature: "Barcode tracking", pathstandard: true, leica: true, epredia: true, traditional: "limited" },
   { feature: "Per-slide quality certificate (CoA)", pathstandard: true, leica: false, epredia: false, traditional: false },

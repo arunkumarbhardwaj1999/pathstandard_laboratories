@@ -63,9 +63,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://pathstandard.in"
   ),
-  title: "PathStandard Technologies — Serialized Pathology Reference Slides",
+  title: "PathStandard — Premium Pathology Slides, Certified & Serialized",
   description:
-    "PathStandard helps laboratories protect sample identity, improve traceability, and maintain audit-ready documentation across the full slide lifecycle.",
+    "Premium precision-manufactured pathology slides — ultra-flat low-iron glass, certified aminosilane surface (contact angle <8.5°), ISO 13485 quality system. Every slide permanently serialized with a downloadable Certificate of Analysis.",
   keywords: [
     "pathology slides",
     "NABL",
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
     "Certificate of Analysis",
   ],
   openGraph: {
-    title: "PathStandard Technologies — Serialized Pathology Reference Slides",
+    title: "PathStandard — Premium Pathology Slides, Certified & Serialized",
     description:
-      "Serialized pathology slides with NABL-ready traceability documentation. Scan any slide, download a Certificate of Analysis in under 10 seconds.",
+      "Premium precision-manufactured pathology slides — ultra-flat low-iron glass, certified aminosilane surface, ISO 13485 quality system. Serialized with a downloadable Certificate of Analysis.",
     type: "website",
     siteName: "PathStandard Technologies",
     locale: "en_IN",
@@ -92,9 +92,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PathStandard Technologies — Serialized Pathology Reference Slides",
+    title: "PathStandard — Premium Pathology Slides, Certified & Serialized",
     description:
-      "Serialized pathology slides with NABL-ready traceability documentation.",
+      "Premium precision-manufactured pathology slides — certified quality, serialized identity.",
     images: ["/images/og-image.png"],
   },
   alternates: {

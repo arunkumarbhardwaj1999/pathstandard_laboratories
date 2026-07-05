@@ -97,7 +97,7 @@ export default function ContactCTA() {
               </a>
             </p>
             <p className="mt-3 text-sm text-ps-slate-400">
-              Made in India · ISO 13485 aligned · Singapore HQ · CDSCO Class A IVD — registration in progress
+              Made in India · Precision-manufactured · ISO 13485-aligned QMS · ISO 15189:2022-aligned · CDSCO Class A IVD (registration in progress) · CE &amp; US FDA pathways in progress · Singapore HQ
             </p>
           </div>
 

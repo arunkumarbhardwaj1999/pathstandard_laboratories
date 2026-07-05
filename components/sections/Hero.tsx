@@ -13,15 +13,15 @@ export default function Hero() {
 
         <Container wide className="relative py-20 md:py-28 lg:py-32">
           <div className="max-w-3xl animate-fade-up">
-            <p className="text-eyebrow mb-5 !text-ps-teal-light">PathStandard™ Serialized Slides</p>
+            <p className="text-eyebrow mb-5 !text-ps-teal-light">PathStandard™ Premium Pathology Slides</p>
             <h1 className="text-hero text-white">
-              Your pathology workflow is digital.{" "}
-              <span className="text-ps-teal-light">Your slide isn&apos;t.</span>
+              The precision slide{" "}
+              <span className="text-ps-teal-light">pathology deserves.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl">
-              PathStandard™ is the permanently identified pathology slide. Superior tissue adhesion,
-              slide-level traceability, and digital provenance — built into every slide. NABL-ready,
-              with no new hardware in your lab.
+              Ultra-flat, low-iron optical glass with a certified aminosilane surface — engineered for
+              superior tissue adhesion and clarity on every stain, IHC and scan. Each slide is also
+              permanently serialized, so premium quality comes with a certificate you can prove.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="#contact" variant="primary">
