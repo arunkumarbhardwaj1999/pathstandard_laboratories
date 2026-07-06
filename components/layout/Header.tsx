@@ -29,8 +29,8 @@ export default function Header() {
             <a href="/roadmap" className="hover:text-white transition-colors">
               For Partners
             </a>
-            <a href="tel:+12248044106" className="hover:text-white transition-colors">
-              +1 (224) 804-4106
+            <a href="tel:+15550000000" className="hover:text-white transition-colors">
+              +1 (555) 000-0000
             </a>
             <span className="text-white/30">|</span>
             <a href="mailto:contact@pathstandard.in" className="hover:text-white transition-colors">

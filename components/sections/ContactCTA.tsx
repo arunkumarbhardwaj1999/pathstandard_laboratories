@@ -88,8 +88,8 @@ export default function ContactCTA() {
             </div>
 
             <p className="mt-8 text-sm text-white/80">
-              <a href="tel:+12248044106" className="font-semibold text-white hover:text-ps-teal-light">
-                +1 (224) 804-4106
+              <a href="tel:+15550000000" className="font-semibold text-white hover:text-ps-teal-light">
+                +1 (555) 000-0000
               </a>
               {"  ·  "}
               <a href="mailto:contact@pathstandard.in" className="font-semibold text-white hover:text-ps-teal-light">

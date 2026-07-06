@@ -20,7 +20,7 @@ const organizationSchema = {
   description:
     "PathStandard manufactures serialized pathology slides with permanent QR code identity and cloud-linked quality records for NABL-ready, ISO 15189:2022 traceability.",
   email: "contact@pathstandard.in",
-  telephone: "+1-224-804-4106",
+  telephone: "+1-555-000-0000",
   knowsAbout: [
     "Pathology slides",
     "Slide serialization",
@@ -33,7 +33,7 @@ const organizationSchema = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+1-224-804-4106",
+    telephone: "+1-555-000-0000",
     email: "contact@pathstandard.in",
     contactType: "sales",
     areaServed: ["IN", "SG", "AE", "US", "GB"],
